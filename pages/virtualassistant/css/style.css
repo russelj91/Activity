@@ -1,0 +1,54 @@
+
+.course-rating{
+  color: orange;
+}
+
+
+
+.container img:hover{
+transform: scale(1.25);
+transition: all ease-in-out .4s;
+}
+
+
+
+.course-include  ul li{
+  list-style: none;
+  text-decoration: none;
+}
+
+.card-img-top{
+height: 100%;
+width: 100%;
+background-size: 100%;
+border-radius: inherit;
+transition: all ease-in-out .4s;
+}
+
+.card:hover .card-img-top{
+transform: scale(1.25);
+}
+
+
+
+.card:hover{
+background: beige;
+font-size: 15px;
+transition: all ease-in-out .4s;
+}
+
+
+
+.footer{
+  background-color: lightgray;
+}
+#footer, ul {
+
+  list-style-type: none;
+
+}
+
+#footer, ul a{
+  color: black;
+  text-decoration: none;
+}
