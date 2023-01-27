@@ -80,5 +80,6 @@ font-size: 30px;
 
 #footer, ul a{
   color: black;
+  margin: 0 auto;
   text-decoration: none;
 }

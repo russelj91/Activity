@@ -22,6 +22,26 @@
     margin: 0 auto;
     float: none;
   }
+
+  .card-img-top{
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+    border-radius: inherit;
+    transition: all ease-in-out .4s;
+  }
+  
+  .card:hover .card-img-top{
+    transform: scale(1.25);
+  }
+  
+  
+  
+  .card:hover{
+    background: beige;
+    font-size: 15px;
+    transition: all ease-in-out .4s;
+  }
   
   
   .navbar ul a:hover{
