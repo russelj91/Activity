@@ -18,6 +18,11 @@
   
   }
   
+  .card{
+    margin: 0 auto;
+    float: none;
+  }
+  
   
   .navbar ul a:hover{
   

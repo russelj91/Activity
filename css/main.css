@@ -24,7 +24,10 @@
 }
 
 
-
+.card, .flip-card{
+  margin: 0 auto;
+  float: none;
+}
 
 /* FLIP CARD */
 
