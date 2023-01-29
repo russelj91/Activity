@@ -60,11 +60,41 @@
               <a class="nav-link" href="#" >Login</a>
            </li>
     
-            <li class="nav-link" href="#">
-                <a class="nav-link" href="#" >FAQ</a>
-            </li>
+        
            </div>
     </ul>
+
+               <!-- modal-->
+                          <!-- Button trigger modal -->
+                          <button type="button" class="btn btn-none" data-bs-toggle="modal" data-bs-target="#exampleModal "  onclick="noTice()">
+                            <i class="fa-solid fa-folder-open"></i>
+                            <span class='badge badge-warning' id='lblCartCount'><div id="total-count"></div></span>
+                          </button>
+    
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Save Courses</h5>
+                                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="cart text-center" id="cart">
+                                    <div id="title" class="fw-bold text-secondary"></div>
+                                  
+                                </div>
+                                </div>
+                                <div class="modal-footer">
+                                 
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                                                  <!--modal end-->
     </nav>
 
 <!--POPULAR START-->
@@ -97,116 +127,156 @@
 
 
                         <div class="col-md">
-                          
-                          <div class="card shadow" style="width: 18rem; height: 28rem;">
-                            <img src="../courses image/bootstrap.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Bootstrap</h5>
-                              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
+                            <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                              <div class="card shadow" style="width: 18rem; height: 28rem;" id="item5">
+                                <img src="../courses image/bootstrap.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title mx-auto" id="title">Bootstrap</h5>  
+                               <div>
+                                <label> 
+                                  <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                  <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                               </label>
+                              </div>
                             </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                            <div class="card-body">
-                              <a href="bootstrapcourse.html" class="btn btn-primary card-link">Details</a>
-                              <a href="#" class="btn btn-primary card-link">Save Course</a>
-                            </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="course-rating">
+                                      <span class="average-rating">(4.5)</span>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                      <span class="reviews text-muted">590 Ratings</span>
+                                  </div>
+                                </li>
+                              </ul>
+                           
+                            
+                            <div class="card-body mx-auto">
+                            <button class="btn btn-primary"  onclick="addToCart(item5)">Save Course</button>
+                            <a href="pages/bootstrapcourse.html" class="btn btn-primary card-link">Details</a>
                           </div>
+                            
                         </div>
-
-                        <div class="col-md">
-                          <div class="card shadow" style="width: 18rem; height: 28rem;">
-                            <img src="../courses image/reac.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">React JS</h5>
-                              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias adipisci quisquam aut nemo soluta totam quam explicabo numquam consequatur quaerat!</p>
-                            </div>
-                                  <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                            <div class="card-body">
-                                <a href="reactcourse.html" class="btn btn-primary card-link">Details</a>
-                              <a href="#" class="btn btn-primary card-link">Save Course</a>
                             </div>
                           </div>
+
+                          <div class="col-md">
+                            <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                              <div class="card shadow" style="width: 18rem; height: 28rem;" id="item6">
+                                <img src="../courses image/reac.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title mx-auto" id="title">React JS</h5>  
+                               <div>
+                                <label> 
+                                  <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                  <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                               </label>
+                              </div>
+                            </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="course-rating">
+                                      <span class="average-rating">(4.5)</span>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                      <span class="reviews text-muted">590 Ratings</span>
+                                  </div>
+                                </li>
+                              </ul>
+                           
+                            
+                            <div class="card-body mx-auto">
+                            <button class="btn btn-primary"  onclick="addToCart(item6)">Save Course</button>
+                            <a href="pages/reactcourse" class="btn btn-primary card-link">Details</a>
+                          </div>
+                            
+                        </div>
+                            </div>
                           </div>
 
 
                           <div class="col-md">
-                            <div class="card shadow" style="width: 18rem; height: 28rem;">
-                              <img src="../courses image/javasccript.png" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Javascript</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur  elit. Magni, architecto inventore illum nostrum cumque ratione! Cupiditate repudiandae aut consequatur voluptas!</p>
+                            <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                              <div class="card shadow" style="width: 18rem; height: 28rem;" id="item7">
+                                <img src="../courses image/javasccript.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title mx-auto" id="title">JavaScript</h5>  
+                               <div>
+                                <label> 
+                                  <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                  <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                               </label>
                               </div>
-                                     <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                              <div class="card-body">
-                                <a href="javascriptcourse.html" class="btn btn-primary card-link">Details</a>
-                                <a href="#" class="btn btn-primary card-link">Save Course</a>
-                              </div>
+                            </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="course-rating">
+                                      <span class="average-rating">(4.5)</span>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                      <span class="reviews text-muted">590 Ratings</span>
+                                  </div>
+                                </li>
+                              </ul>
+                           
+                            
+                            <div class="card-body mx-auto">
+                            <button class="btn btn-primary"  onclick="addToCart(item7)">Save Course</button>
+                            <a href="pages/javascriptcourse.html" class="btn btn-primary card-link">Details</a>
+                          </div>
+                            
+                        </div>
                             </div>
                           </div>
 
 
 
+                         
                           <div class="col-md">
-                            <div class="card shadow" style="width: 18rem; height: 28rem;">
-                              <img src="../courses image/tailwind.png" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Tailwind CSS</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, ratione animi! Facere exercitationem non illum quos numquam ea minus eligendi?</p>
-                              </div>
-                                     <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                              <div class="card-body">
-                                <a href="tailwindcourse.html" class="btn btn-primary card-link">Details</a>
-                                <a href="#" class="btn btn-primary card-link">Save Course</a>
+                            <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                              <div class="card shadow" style="width: 18rem; height: 28rem;" id="item8">
+                                <img src="../courses image/tailwind.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title mx-auto" id="title">Tailwind CSS</h5>  
+                               <div>
+                                <label> 
+                                  <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                  <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                               </label>
                               </div>
                             </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="course-rating">
+                                      <span class="average-rating">(4.5)</span>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                      <span class="reviews text-muted">590 Ratings</span>
+                                  </div>
+                                </li>
+                              </ul>
+                           
+                            
+                            <div class="card-body mx-auto">
+                            <button class="btn btn-primary"  onclick="addToCart(item8)">Save Course</button>
+                            <a href="pages/tailwindcourse.html" class="btn btn-primary card-link">Details</a>
+                          </div>
+                            
+                        </div>
                             </div>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -221,116 +291,154 @@
 
 
                             <div class="col-md">
-                            
-                            <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                <img src="../courses image/reac.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <h5 class="card-title">React JS</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
+                                <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                                  <div class="card shadow" style="width: 18rem; height: 28rem;" id="item9">
+                                    <img src="../courses image/reac.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title mx-auto" id="title">React JS</h5>  
+                                   <div>
+                                    <label> 
+                                      <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                      <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                                   </label>
+                                  </div>
                                 </div>
-                                      <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                                <div class="card-body">
-                                    <a href="reactcourse.html" class="btn btn-primary card-link">Details</a>
-                                <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                      <div class="course-rating">
+                                          <span class="average-rating">(4.5)</span>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                          <span class="reviews text-muted">590 Ratings</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                               
+                                
+                                <div class="card-body mx-auto">
+                                <button class="btn btn-primary"  onclick="addToCart(item9)">Save Course</button>
+                                <a href="pages/reactcourse.html" class="btn btn-primary card-link">Details</a>
+                              </div>
+                                
                             </div>
+                                </div>
+                              </div>
+
+                              <div class="col-md">
+                                <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                                  <div class="card shadow" style="width: 18rem; height: 28rem;" id="item10">
+                                    <img src="../courses image/angular.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title mx-auto" id="title">Angular</h5>  
+                                   <div>
+                                    <label> 
+                                      <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                      <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                                   </label>
+                                  </div>
+                                </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                      <div class="course-rating">
+                                          <span class="average-rating">(4.5)</span>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                          <span class="reviews text-muted">590 Ratings</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                               
+                                
+                                <div class="card-body mx-auto">
+                                <button class="btn btn-primary"  onclick="addToCart(item10)">Save Course</button>
+                                <a href="pages/angularcourse.html" class="btn btn-primary card-link">Details</a>
+                              </div>
+                                
                             </div>
-
-                            <div class="col-md">
-                            <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                <img src="../courses image/angular.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <h5 class="card-title">Angular</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias adipisci quisquam aut nemo soluta totam quam explicabo numquam consequatur quaerat!</p>
                                 </div>
-                                       <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
+                              </div>
 
-                                <div class="card-body">
-                                    <a href="angularcourse.html" class="btn btn-primary card-link">Details</a>
-                                <a href="#" class="btn btn-primary card-link">Save Course</a>
+
+                              <div class="col-md">
+                                <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                                  <div class="card shadow" style="width: 18rem; height: 28rem;" id="item11">
+                                    <img src="../courses image/node.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title mx-auto" id="title">Node JS</h5>  
+                                   <div>
+                                    <label> 
+                                      <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                      <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                                   </label>
+                                  </div>
                                 </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                      <div class="course-rating">
+                                          <span class="average-rating">(4.5)</span>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                          <span class="reviews text-muted">590 Ratings</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                               
+                                
+                                <div class="card-body mx-auto">
+                                <button class="btn btn-primary"  onclick="addToCart(item11)">Save Course</button>
+                                <a href="pages/nodecoursehtml" class="btn btn-primary card-link">Details</a>
+                              </div>
+                                
                             </div>
+                                </div>
+                              </div>
+
+
+                              <div class="col-md">
+                                <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                                  <div class="card shadow" style="width: 18rem; height: 28rem;" id="item12">
+                                    <img src="../courses image/php.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title mx-auto" id="title">PHP</h5>  
+                                   <div>
+                                    <label> 
+                                      <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                      <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                                   </label>
+                                  </div>
+                                </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                      <div class="course-rating">
+                                          <span class="average-rating">(4.5)</span>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                          <span class="reviews text-muted">590 Ratings</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                               
+                                
+                                <div class="card-body mx-auto">
+                                <button class="btn btn-primary"  onclick="addToCart(item12)">Save Course</button>
+                                <a href="pages/phpcourse.html" class="btn btn-primary card-link">Details</a>
+                              </div>
+                                
                             </div>
-
-
-                            <div class="col-md">
-                                <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                <img src="../courses image/node.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Node JS</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur  elit. Magni, architecto inventore illum nostrum cumque ratione! Cupiditate repudiandae aut consequatur voluptas!</p>
                                 </div>
-                                       <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                                <div class="card-body">
-                                    <a href="nodecourse.html" class="btn btn-primary card-link">Details</a>
-                                    <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                </div>
-                                </div>
-                            </div>
-
-
-
-                            <div class="col-md">
-                                <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                <img src="../courses image/php.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">PHP</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, ratione animi! Facere exercitationem non illum quos numquam ea minus eligendi?</p>
-                                </div>
-                                       <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                                <div class="card-body">
-                                    <a href="phpcourse.html" class="btn btn-primary card-link">Details</a>
-                                    <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                </div>
-                                </div>
-                                </div>
+                              </div>
                             </div>
 
             </div> 
@@ -345,116 +453,155 @@
 
 
                             <div class="col-md">
-                            
-                            <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                <img src="../courses image/ember.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <h5 class="card-title">Ember</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
+                                <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                                  <div class="card shadow" style="width: 18rem; height: 28rem;" id="item13">
+                                    <img src="../courses image/ember.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title mx-auto" id="title">Ember</h5>  
+                                   <div>
+                                    <label> 
+                                      <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                      <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                                   </label>
+                                  </div>
                                 </div>
-                                       <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                                <div class="card-body">
-                                    <a href="embercourse.html" class="btn btn-primary card-link">Details</a>
-                                <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                      <div class="course-rating">
+                                          <span class="average-rating">(4.5)</span>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                          <span class="reviews text-muted">590 Ratings</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                               
+                                
+                                <div class="card-body mx-auto">
+                                <button class="btn btn-primary"  onclick="addToCart(item13)">Save Course</button>
+                                <a href="pages/embercourse.html" class="btn btn-primary card-link">Details</a>
+                              </div>
+                                
                             </div>
+                                </div>
+                              </div>
+
+                              <div class="col-md">
+                                <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                                  <div class="card shadow" style="width: 18rem; height: 28rem;" id="item14">
+                                    <img src="../courses image/next.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title mx-auto" id="title">Next JS</h5>  
+                                   <div>
+                                    <label> 
+                                      <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                      <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                                   </label>
+                                  </div>
+                                </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                      <div class="course-rating">
+                                          <span class="average-rating">(4.5)</span>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                          <span class="reviews text-muted">590 Ratings</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                               
+                                
+                                <div class="card-body mx-auto">
+                                <button class="btn btn-primary"  onclick="addToCart(item14)">Save Course</button>
+                                <a href="pages/nextcoursehtml" class="btn btn-primary card-link">Details</a>
+                              </div>
+                                
                             </div>
-
-                            <div class="col-md">
-                            <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                <img src="../courses image/next.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <h5 class="card-title">Next JS</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias adipisci quisquam aut nemo soluta totam quam explicabo numquam consequatur quaerat!</p>
                                 </div>
-                                       <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
+                              </div>
 
-                                <div class="card-body">
-                                    <a href="nextcourse.html" class="btn btn-primary card-link">Details</a>
-                                <a href="#" class="btn btn-primary card-link">Save Course</a>
+                              <div class="col-md">
+                                <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                                  <div class="card shadow" style="width: 18rem; height: 28rem;" id="item15">
+                                    <img src="../courses image/magic.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title mx-auto" id="title">Magic CSS</h5>  
+                                   <div>
+                                    <label> 
+                                      <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                      <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                                   </label>
+                                  </div>
                                 </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                      <div class="course-rating">
+                                          <span class="average-rating">(4.5)</span>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                          <span class="reviews text-muted">590 Ratings</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                               
+                                
+                                <div class="card-body mx-auto">
+                                <button class="btn btn-primary"  onclick="addToCart(item15)">Save Course</button>
+                                <a href="pages/magiccourse.html" class="btn btn-primary card-link">Details</a>
+                              </div>
+                                
                             </div>
+                                </div>
+                              </div>
+
+
+
+                              <div class="col-md">
+                                <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                                  <div class="card shadow" style="width: 18rem; height: 28rem;" id="item16">
+                                    <img src="../courses image/tacit.webp" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title mx-auto" id="title">Tacit</h5>  
+                                   <div>
+                                    <label> 
+                                      <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                      <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                                   </label>
+                                  </div>
+                                </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                      <div class="course-rating">
+                                          <span class="average-rating">(4.5)</span>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                          <span class="reviews text-muted">590 Ratings</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                               
+                                
+                                <div class="card-body mx-auto">
+                                <button class="btn btn-primary"  onclick="addToCart(item16)">Save Course</button>
+                                <a href="pages/tacitcourse.html" class="btn btn-primary card-link">Details</a>
+                              </div>
+                                
                             </div>
-
-
-                            <div class="col-md">
-                                <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                <img src="../courses image/magic.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Magic CSS</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur  elit. Magni, architecto inventore illum nostrum cumque ratione! Cupiditate repudiandae aut consequatur voluptas!</p>
                                 </div>
-                                       <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
+                              </div>
 
-                                <div class="card-body">
-                                    <a href="magiccourse.html" class="btn btn-primary card-link">Details</a>
-                                    <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                </div>
-                                </div>
-                            </div>
-
-
-
-                            <div class="col-md">
-                                <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                <img src="../courses image/tacit.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Tacit</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, ratione animi! Facere exercitationem non illum quos numquam ea minus eligendi?</p>
-                                </div>
-                                       <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                                <div class="card-body">
-                                    <a href="tacitcourse.html" class="btn btn-primary card-link">Details</a>
-                                    <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                </div>
-                                </div>
-                                </div>
                             </div>
                         </div>
                         </div>
@@ -469,116 +616,154 @@
 
 
                                 <div class="col-md">
-                                
-                                <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                    <img src="../courses image/semantic.png" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                    <h5 class="card-title">Semantic UI</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
+                                    <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                                      <div class="card shadow" style="width: 18rem; height: 28rem;" id="item17">
+                                        <img src="../courses image/semantic.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                        <h5 class="card-title mx-auto" id="title">Semantic UI</h5>  
+                                       <div>
+                                        <label> 
+                                          <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                          <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                                       </label>
+                                      </div>
                                     </div>
-                                          <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                                    <div class="card-body">
-                                        <a href="semanticcourse.html" class="btn btn-primary card-link">Details</a>
-                                    <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                    </div>
+                                      <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                          <div class="course-rating">
+                                              <span class="average-rating">(4.5)</span>
+                                              <i class="fas fa-star" aria-hidden="true"></i>
+                                              <i class="fas fa-star" aria-hidden="true"></i>
+                                              <i class="fas fa-star" aria-hidden="true"></i>
+                                              <i class="fas fa-star" aria-hidden="true"></i>
+                                              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                              <span class="reviews text-muted">590 Ratings</span>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                   
+                                    
+                                    <div class="card-body mx-auto">
+                                    <button class="btn btn-primary"  onclick="addToCart(item17)">Save Course</button>
+                                    <a href="pages/semanticcoursehtml" class="btn btn-primary card-link">Details</a>
+                                  </div>
+                                    
                                 </div>
+                                    </div>
+                                  </div>
+    
+                                  <div class="col-md">
+                                    <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                                      <div class="card shadow" style="width: 18rem; height: 28rem;" id="item18">
+                                        <img src="../courses image/materialize.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                        <h5 class="card-title mx-auto" id="title">Materialize CSS</h5>  
+                                       <div>
+                                        <label> 
+                                          <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                          <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                                       </label>
+                                      </div>
+                                    </div>
+                                      <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                          <div class="course-rating">
+                                              <span class="average-rating">(4.5)</span>
+                                              <i class="fas fa-star" aria-hidden="true"></i>
+                                              <i class="fas fa-star" aria-hidden="true"></i>
+                                              <i class="fas fa-star" aria-hidden="true"></i>
+                                              <i class="fas fa-star" aria-hidden="true"></i>
+                                              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                              <span class="reviews text-muted">590 Ratings</span>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                   
+                                    
+                                    <div class="card-body mx-auto">
+                                    <button class="btn btn-primary"  onclick="addToCart(item18)">Save Course</button>
+                                    <a href="pages/materializecourse.html" class="btn btn-primary card-link">Details</a>
+                                  </div>
+                                    
                                 </div>
+                                    </div>
+                                  </div>
     
-                                <div class="col-md">
-                                <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                    <img src="../courses image/materialize.png" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                    <h5 class="card-title">Materialize</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias adipisci quisquam aut nemo soluta totam quam explicabo numquam consequatur quaerat!</p>
+    
+                                  <div class="col-md">
+                                    <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                                      <div class="card shadow" style="width: 18rem; height: 28rem;" id="item19">
+                                        <img src="../courses image/jquery.jpeg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                        <h5 class="card-title mx-auto" id="title">JQuery</h5>  
+                                       <div>
+                                        <label> 
+                                          <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                          <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                                       </label>
+                                      </div>
                                     </div>
-                                           <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                                    <div class="card-body">
-                                        <a href="materializecourse.html" class="btn btn-primary card-link">Details</a>
-                                    <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                    </div>
+                                      <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                          <div class="course-rating">
+                                              <span class="average-rating">(4.5)</span>
+                                              <i class="fas fa-star" aria-hidden="true"></i>
+                                              <i class="fas fa-star" aria-hidden="true"></i>
+                                              <i class="fas fa-star" aria-hidden="true"></i>
+                                              <i class="fas fa-star" aria-hidden="true"></i>
+                                              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                              <span class="reviews text-muted">590 Ratings</span>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                   
+                                    
+                                    <div class="card-body mx-auto">
+                                    <button class="btn btn-primary"  onclick="addToCart(item19)">Save Course</button>
+                                    <a href="pages/jquerycourse.html" class="btn btn-primary card-link">Details</a>
+                                  </div>
+                                    
                                 </div>
+                                    </div>
+                                  </div>
+    
+    
+                                  <div class="col-md">
+                                    <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                                      <div class="card shadow" style="width: 18rem; height: 28rem;" id="item20">
+                                        <img src="../courses image/expres.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                        <h5 class="card-title mx-auto" id="title">Express JS</h5>  
+                                       <div>
+                                      
+                                          <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                          <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                                  
+                                      </div>
+                                    </div>
+                                      <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                          <div class="course-rating">
+                                              <span class="average-rating">(4.5)</span>
+                                              <i class="fas fa-star" aria-hidden="true"></i>
+                                              <i class="fas fa-star" aria-hidden="true"></i>
+                                              <i class="fas fa-star" aria-hidden="true"></i>
+                                              <i class="fas fa-star" aria-hidden="true"></i>
+                                              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                              <span class="reviews text-muted">590 Ratings</span>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                   
+                                    
+                                    <div class="card-body mx-auto">
+                                    <button class="btn btn-primary"  onclick="addToCart(item20)">Save Course</button>
+                                    <a href="pages/expresscourse.html" class="btn btn-primary card-link">Details</a>
+                                  </div>
+                                    
                                 </div>
-    
-    
-                                <div class="col-md">
-                                    <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                    <img src="../courses image/jquery.jpeg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">JQuery</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur  elit. Magni, architecto inventore illum nostrum cumque ratione! Cupiditate repudiandae aut consequatur voluptas!</p>
                                     </div>
-                                           <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                                    <div class="card-body">
-                                        <a href="jquerycourse.html" class="btn btn-primary card-link">Details</a>
-                                        <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                    </div>
-                                    </div>
-                                </div>
-    
-    
-    
-                                <div class="col-md">
-                                    <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                    <img src="../courses image/expres.png" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Express</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, ratione animi! Facere exercitationem non illum quos numquam ea minus eligendi?</p>
-                                    </div>
-                                           <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                                    <div class="card-body">
-                                        <a href="expresscourse.html" class="btn btn-primary card-link">Details</a>
-                                        <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                    </div>
-                                    </div>
-                                    </div>
+                                  </div>
                                 </div>
 
 
@@ -601,9 +786,9 @@
 <div class=" row ">
     <div class="col-md-3 mx-2 my-2 shadow d-none d-sm-block">
 
-        <h1>VACANT SLOT</h1>
+   
         
-
+       
 
     </div>
 
@@ -611,11 +796,16 @@
         <div class="col-md mx-2 shadow">
         <div class="row">
                <div class="col-md-4">
+                <div class="" id="item25">
                     <img src="../courses image/html.jpg" width="350" class="my-3 img-fluid rounded shadow">
+                <title class="" id="title">HTML - Hyper Text Markup Language &nbsp; Price: 1,000,000</title>
+                 </div>
+
                 </div>
                 
                 <div class="col-md-8 my-4">
-                        <h4 class="course-title">HTML - Hyper Text Markup Language </h4>
+                        <h4 class="course-title" id="title">HTML - Hyper Text Markup Language </h4>
+                        
 
                         <div class="course-rating">
                             <span class="average-rating">(4.5)</span>
@@ -626,550 +816,137 @@
                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
                             <span class="reviews text-muted">590 Ratings</span>
                           </div>
-                
-                          <h6 class="text-dark">John Doe</h6>
+                          
                        
-                         <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                         <a class="btn btn-primary" href="htmlcourse.html">View this course</a>
-       
+                          <h6 class="text-dark">John Doe</h6>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                        </p>
                         
+                         <button class="btn btn-primary"  onclick="addToCart(item25)">Save Course</button>
+                         <a class="btn btn-primary" href="htmlcourse.html">View this course</a> 
                 </div>     
         </div>
     <hr>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="../courses image/css.png" width="350" class="my-3 img-fluid rounded shadow">
-                </div>
-                
-                <div class="col-md-8 my-4">
-                        <h4 class="course-title">CSS - Cascading Style Sheet</h4>
+    
 
-                        <div class="course-rating">
-                            <span class="average-rating">(4.5)</span>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                            <span class="reviews text-muted">590 Ratings</span>
-                        </div>
-                
-                        <h6 class="text-dark">John Doe</h6>
-                        
-                        <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                        <a class="btn btn-primary" href="csscourse.html">View this course</a>
+    <div class="row">
+        <div class="col-md-4">
+         <div class="" id="item26">
+             <img src="../courses image/css.png" width="350" class="my-3 img-fluid rounded shadow">
+         <title class="" id="title">Cascading Style Sheet / CSS &nbsp; Price: 1,000,000</title>
+          </div>
 
-                        
-                </div>     
-        </div>
+         </div>
+         
+         <div class="col-md-8 my-4">
+                 <h4 class="course-title" id="title">Cascading Style Sheet / CSS</h4>
+                 
+
+                 <div class="course-rating">
+                     <span class="average-rating">(4.5)</span>
+                     <i class="fas fa-star" aria-hidden="true"></i>
+                     <i class="fas fa-star" aria-hidden="true"></i>
+                     <i class="fas fa-star" aria-hidden="true"></i>
+                     <i class="fas fa-star" aria-hidden="true"></i>
+                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                     <span class="reviews text-muted">590 Ratings</span>
+                   </div>
+                   
+                
+                   <h6 class="text-dark">John Doe</h6>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                </p>
+                 
+                  <button class="btn btn-primary"  onclick="addToCart(item26)">Save Course</button>
+                  <a class="btn btn-primary" href="csscourse.html">View this course</a> 
+         </div>     
+ </div>
         <hr>
 
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="../courses image/javasccript.png" width="350" class="my-3 img-fluid rounded shadow">
-                    </div>
+        <div class="row">
+            <div class="col-md-4">
+             <div class="" id="item27">
+                 <img src="../courses image/javasccript.png" width="350" class="my-3 img-fluid rounded shadow">
+             <title class="" id="title">JavaScript &nbsp; Price: 1,000,000</title>
+              </div>
+    
+             </div>
+             
+             <div class="col-md-8 my-4">
+                     <h4 class="course-title" id="title">JavaScript</h4>
+                     
+    
+                     <div class="course-rating">
+                         <span class="average-rating">(4.5)</span>
+                         <i class="fas fa-star" aria-hidden="true"></i>
+                         <i class="fas fa-star" aria-hidden="true"></i>
+                         <i class="fas fa-star" aria-hidden="true"></i>
+                         <i class="fas fa-star" aria-hidden="true"></i>
+                         <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                         <span class="reviews text-muted">590 Ratings</span>
+                       </div>
+                       
                     
-                    <div class="col-md-8 my-4">
-                            <h4 class="course-title">Javascript</h4>
-
-                            <div class="course-rating">
-                                <span class="average-rating">(4.5)</span>
-                                <i class="fas fa-star" aria-hidden="true"></i>
-                                <i class="fas fa-star" aria-hidden="true"></i>
-                                <i class="fas fa-star" aria-hidden="true"></i>
-                                <i class="fas fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                <span class="reviews text-muted">590 Ratings</span>
-                            </div>
-                    
-                            <h6 class="text-dark">John Doe</h6>
-                            
-                            <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                            <a class="btn btn-primary" href="javascriptcourse.html">View this course</a>
-            
-                            
-                    </div>     
-            </div>
+                       <h6 class="text-dark">John Doe</h6>
+                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                    </p>
+                     
+                      <button class="btn btn-primary"  onclick="addToCart(item27)">Save Course</button>
+                      <a class="btn btn-primary" href="javascriptcourse.html">View this course</a> 
+             </div>     
+     </div>
         <hr>
 
 
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/bootstrap.png" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Bootstrap</h4>
-
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="bootstrapcourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
-            <hr>
-
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/foundation.png" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Foundation</h4>
-
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="foundation.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
-            <hr>
-
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/bulma.png" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Bulma</h4>
-
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="bulma.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
-            <hr>
-
-
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/ulkit.png" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">UI Kit</h4>
-
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="ulkitcourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
-            <hr>
-
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/semantic.png" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Semantic UI</h4>
-        
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="semanticcourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
-            <hr>
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/tailwind.png" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Tailwind CSS </h4>
-        
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="tailwindcourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
-            <hr>
-
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/materialize.png" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Materialize</h4>
-        
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="materializecourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
-            <hr>
-
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/pure.jpg" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Pure CSS</h4>
-        
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="purecsscourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
-            <hr>
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/skeleton.jpg" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Skeleton</h4>
-        
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="skeletoncourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
-            <hr>
-
-
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/magic.png" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Magic CSS</h4>
-        
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="magiccourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
-            <hr>
-
-
-
-
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <img src="../courses image/animate.jpg" width="350" class="my-3 img-fluid rounded shadow">
-                                </div>
-                                
-                                <div class="col-md-8 my-4">
-                                        <h4 class="course-title">Animate</h4>
-                
-                                        <div class="course-rating">
-                                            <span class="average-rating">(4.5)</span>
-                                            <i class="fas fa-star" aria-hidden="true"></i>
-                                            <i class="fas fa-star" aria-hidden="true"></i>
-                                            <i class="fas fa-star" aria-hidden="true"></i>
-                                            <i class="fas fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                            <span class="reviews text-muted">590 Ratings</span>
-                                        </div>
-                                
-                                        <h6 class="text-dark">John Doe</h6>
-                                        
-                                        <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                        <a class="btn btn-primary" href="animatecourse.html">View this course</a>
-                        
-                                        
-                                </div>     
-                        </div>
-                    <hr>
-
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="../courses image/tacit.webp" width="350" class="my-3 img-fluid rounded shadow">
-                            </div>
-                            
-                            <div class="col-md-8 my-4">
-                                    <h4 class="course-title">Tacit</h4>
-            
-                                    <div class="course-rating">
-                                        <span class="average-rating">(4.5)</span>
-                                        <i class="fas fa-star" aria-hidden="true"></i>
-                                        <i class="fas fa-star" aria-hidden="true"></i>
-                                        <i class="fas fa-star" aria-hidden="true"></i>
-                                        <i class="fas fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                        <span class="reviews text-muted">590 Ratings</span>
-                                    </div>
-                            
-                                    <h6 class="text-dark">John Doe</h6>
-                                    
-                                    <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                    <a class="btn btn-primary" href="tacitcourse.html">View this course</a>
+        <div class="row">
+            <div class="col-md-4">
+             <div class="" id="item28">
+                 <img src="../courses image/bootstrap.png" width="350" class="my-3 img-fluid rounded shadow">
+             <title class="" id="title">Bootstrap &nbsp; Price: 1,000,000</title>
+              </div>
+    
+             </div>
+             
+             <div class="col-md-8 my-4">
+                     <h4 class="course-title" id="title">Bootstrap</h4>
+                     
+    
+                     <div class="course-rating">
+                         <span class="average-rating">(4.5)</span>
+                         <i class="fas fa-star" aria-hidden="true"></i>
+                         <i class="fas fa-star" aria-hidden="true"></i>
+                         <i class="fas fa-star" aria-hidden="true"></i>
+                         <i class="fas fa-star" aria-hidden="true"></i>
+                         <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                         <span class="reviews text-muted">590 Ratings</span>
+                       </div>
+                       
                     
-                                    
-                            </div>     
-                    </div>
-                <hr>
-
-
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/jquery.jpeg" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">jQuery</h4>
-        
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="jquerycourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
-            <hr>
-
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/reac.png" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">React JS</h4>
-        
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="reactcourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
-            <hr>
-
-
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/vue.png" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Vue JS</h4>
-        
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="vuecourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
-            <hr>
-
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/angular.jpg" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Angular</h4>
-        
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="angularcourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
+                       <h6 class="text-dark">John Doe</h6>
+                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                    </p>
+                     
+                      <button class="btn btn-primary"  onclick="addToCart(item28)">Save Course</button>
+                      <a class="btn btn-primary" href="bootstrapcourse.html">View this course</a> 
+             </div>     
+     </div>
             <hr>
 
 
             <div class="row">
                 <div class="col-md-4">
-                     <img src="../courses image/svelte.png" width="350" class="my-3 img-fluid rounded shadow">
+                 <div class="" id="item29">
+                     <img src="../courses image/foundation.png" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Foundation &nbsp; Price: 1,000,000</title>
+                  </div>
+        
                  </div>
                  
                  <div class="col-md-8 my-4">
-                         <h4 class="course-title">Svelte</h4>
- 
+                         <h4 class="course-title" id="title">Foundation</h4>
+                         
+        
                          <div class="course-rating">
                              <span class="average-rating">(4.5)</span>
                              <i class="fas fa-star" aria-hidden="true"></i>
@@ -1179,309 +956,908 @@
                              <i class="fa fa-star-half-o" aria-hidden="true"></i>
                              <span class="reviews text-muted">590 Ratings</span>
                            </div>
-                 
-                           <h6 class="text-dark">John Doe</h6>
+                           
                         
-                          <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                          <a class="btn btn-primary" href="sveltecourse.html">View this course</a>
+                           <h6 class="text-dark">John Doe</h6>
+                          
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                        </p>
+                          <button class="btn btn-primary"  onclick="addToCart(item29)">Save Course</button>
+                          <a class="btn btn-primary" href="foundation.html">View this course</a> 
+                 </div>     
+         </div>
+            <hr>
+
+
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item30">
+                     <img src="../courses image/bulma.png" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Bulma &nbsp; Price: 1,000,000</title>
+                  </div>
         
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">Bulma</h4>
                          
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
+                        
+                           <h6 class="text-dark">John Doe</h6>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                        </p>
+                         
+                          <button class="btn btn-primary"  onclick="addToCart(item30)">Save Course</button>
+                          <a class="btn btn-primary" href="bulma.html">View this course</a> 
+                 </div>     
+         </div>
+            <hr>
+
+
+
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item31">
+                     <img src="../courses image/ulkit.png" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">UI Kit &nbsp; Price: 1,000,000</title>
+                  </div>
+        
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">UI Kit</h4>
+                         
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
+                        
+                           <h6 class="text-dark">John Doe</h6>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                        </p>
+                         
+                          <button class="btn btn-primary"  onclick="addToCart(item31)">Save Course</button>
+                          <a class="btn btn-primary" href="ulkitcourse.html">View this course</a> 
+                 </div>     
+         </div>
+            <hr>
+
+
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item32">
+                     <img src="../courses image/semantic.png" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Semantic UI &nbsp; Price: 1,000,000</title>
+                  </div>
+        
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">Semantic UI</h4>
+                         
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
+                        
+                           <h6 class="text-dark">John Doe</h6>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                        </p>
+                         
+                          <button class="btn btn-primary"  onclick="addToCart(item32)">Save Course</button>
+                          <a class="btn btn-primary" href="semanticcourse.html">View this course</a> 
+                 </div>     
+         </div>
+            <hr>
+
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item33">
+                     <img src="../courses image/tailwind.png" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Tailwind CSS &nbsp; Price: 1,000,000</title>
+                  </div>
+        
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">Tailwind CSS</h4>
+                         
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
+                        
+                           <h6 class="text-dark">John Doe</h6>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                        </p>
+                         
+                          <button class="btn btn-primary"  onclick="addToCart(item33)">Save Course</button>
+                          <a class="btn btn-primary" href="tailwindcourse.html">View this course</a> 
+                 </div>     
+         </div>
+            <hr>
+
+
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item34">
+                     <img src="../courses image/materialize.png" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Materialize &nbsp; Price: 1,000,000</title>
+                  </div>
+        
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">Materialize</h4>
+                         
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
+                        
+                           <h6 class="text-dark">John Doe</h6>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                        </p>
+                         
+                          <button class="btn btn-primary"  onclick="addToCart(item34)">Save Course</button>
+                          <a class="btn btn-primary" href="materializecourse.html">View this course</a> 
+                 </div>     
+         </div>
+            <hr>
+
+
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item35">
+                     <img src="../courses image/pure.jpg" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Pure CSS &nbsp; Price: 1,000,000</title>
+                  </div>
+        
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">Pure CSS</h4>
+                         
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
+                        
+                           <h6 class="text-dark">John Doe</h6>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                        </p>
+                         
+                          <button class="btn btn-primary"  onclick="addToCart(item35)">Save Course</button>
+                          <a class="btn btn-primary" href="purecsscourse.html">View this course</a> 
+                 </div>     
+         </div>
+            <hr>
+
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item36">
+                     <img src="../courses image/skeleton.jpg" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Skeleton &nbsp; Price: 1,000,000</title>
+                  </div>
+        
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">Skeleton</h4>
+                         
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
+                        
+                           <h6 class="text-dark">John Doe</h6>
+                          
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                        </p>
+                          <button class="btn btn-primary"  onclick="addToCart(item36)">Save Course</button>
+                          <a class="btn btn-primary" href="skeletoncourse.html">View this course</a> 
+                 </div>     
+         </div>
+            <hr>
+
+
+
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item37">
+                     <img src="../courses image/magic.png" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Magic CSS &nbsp; Price: 1,000,000</title>
+                  </div>
+        
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">Magic CSS</h4>
+                         
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
+                        
+                           <h6 class="text-dark">John Doe</h6>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                        </p>
+                         
+                          <button class="btn btn-primary"  onclick="addToCart(item37)">Save Course</button>
+                          <a class="btn btn-primary" href="magiccourse.html">View this course</a> 
+                 </div>     
+         </div>
+            <hr>
+
+
+
+
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item38">
+                     <img src="../courses image/animate.jpg" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Animate &nbsp; Price: 1,000,000</title>
+                  </div>
+        
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">Animate</h4>
+                         
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
+                        
+                           <h6 class="text-dark">John Doe</h6>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                        </p>
+                         
+                          <button class="btn btn-primary"  onclick="addToCart(item38)">Save Course</button>
+                          <a class="btn btn-primary" href="animatecourse.html">View this course</a> 
+                 </div>     
+         </div>
+                    <hr>
+
+
+                    <div class="row">
+                        <div class="col-md-4">
+                         <div class="" id="item39">
+                             <img src="../courses image/tacit.webp" width="350" class="my-3 img-fluid rounded shadow">
+                         <title class="" id="title">Tacit &nbsp; Price: 1,000,000</title>
+                          </div>
+                
+                         </div>
+                         
+                         <div class="col-md-8 my-4">
+                                 <h4 class="course-title" id="title">Tacit</h4>
+                                 
+                
+                                 <div class="course-rating">
+                                     <span class="average-rating">(4.5)</span>
+                                     <i class="fas fa-star" aria-hidden="true"></i>
+                                     <i class="fas fa-star" aria-hidden="true"></i>
+                                     <i class="fas fa-star" aria-hidden="true"></i>
+                                     <i class="fas fa-star" aria-hidden="true"></i>
+                                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                     <span class="reviews text-muted">590 Ratings</span>
+                                   </div>
+                                   
+                                
+                                   <h6 class="text-dark">John Doe</h6>
+                                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                                </p>
+                                 
+                                  <button class="btn btn-primary"  onclick="addToCart(item39)">Save Course</button>
+                                  <a class="btn btn-primary" href="tacitcourse.html">View this course</a> 
+                         </div>     
+                 </div>
+                <hr>
+
+
+
+                <div class="row">
+                    <div class="col-md-4">
+                     <div class="" id="item40">
+                         <img src="../courses image/jquery.jpeg" width="350" class="my-3 img-fluid rounded shadow">
+                     <title class="" id="title">JQuery &nbsp; Price: 1,000,000</title>
+                      </div>
+            
+                     </div>
+                     
+                     <div class="col-md-8 my-4">
+                             <h4 class="course-title" id="title">JQuery</h4>
+                             
+            
+                             <div class="course-rating">
+                                 <span class="average-rating">(4.5)</span>
+                                 <i class="fas fa-star" aria-hidden="true"></i>
+                                 <i class="fas fa-star" aria-hidden="true"></i>
+                                 <i class="fas fa-star" aria-hidden="true"></i>
+                                 <i class="fas fa-star" aria-hidden="true"></i>
+                                 <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                 <span class="reviews text-muted">590 Ratings</span>
+                               </div>
+                               
+                            
+                               <h6 class="text-dark">John Doe</h6>
+                               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                            </p>
+                             
+                              <button class="btn btn-primary"  onclick="addToCart(item40)">Save Course</button>
+                              <a class="btn btn-primary" href="jquerycourse.html">View this course</a> 
+                     </div>     
+             </div>
+            <hr>
+
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item41">
+                     <img src="../courses image/reac.png" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">React JS &nbsp; Price: 1,000,000</title>
+                  </div>
+        
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">React JS</h4>
+                         
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
+                        
+                           <h6 class="text-dark">John Doe</h6>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                        </p>
+                         
+                          <button class="btn btn-primary"  onclick="addToCart(item41)">Save Course</button>
+                          <a class="btn btn-primary" href="reactcourse.html">View this course</a> 
+                 </div>     
+         </div>
+            <hr>
+
+
+
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item42">
+                     <img src="../courses image/vue.png" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Vue JS &nbsp; Price: 1,000,000</title>
+                  </div>
+        
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">Vue JS</h4>
+                         
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
+                        
+                           <h6 class="text-dark">John Doe</h6>
+                          
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                        </p>
+                          <button class="btn btn-primary"  onclick="addToCart(item42)">Save Course</button>
+                          <a class="btn btn-primary" href="vuecourse.html">View this course</a> 
+                 </div>     
+         </div>
+            <hr>
+
+
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item43">
+                     <img src="../courses image/angular.jpg" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Angular &nbsp; Price: 1,000,000</title>
+                  </div>
+        
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">Angular</h4>
+                         
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
+                        
+                           <h6 class="text-dark">John Doe</h6>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                        </p>
+                         
+                          <button class="btn btn-primary"  onclick="addToCart(item43)">Save Course</button>
+                          <a class="btn btn-primary" href="angularcourse.html">View this course</a> 
+                 </div>     
+         </div>
+            <hr>
+
+
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item44">
+                     <img src="../courses image/svelte.png" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Svelte &nbsp; Price: 1,000,000</title>
+                  </div>
+        
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">Svelte</h4>
+                         
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
+                        
+                           <h6 class="text-dark">John Doe</h6>
+                          
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                           </p>
+                          <button class="btn btn-primary"  onclick="addToCart(item44)">Save Course</button>
+                          <a class="btn btn-primary" href="sveltecourse.html">View this course</a> 
                  </div>     
          </div>
      <hr>
 
 
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="../courses image/expres.png" width="350" class="my-3 img-fluid rounded shadow">
-                    </div>
+                
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item45">
+                     <img src="../courses image/expres.png" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Express JS &nbsp; Price: 1,000,000</title>
+                  </div>
+        
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">Express JS</h4>
+                         
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
+                        
+                           <h6 class="text-dark">John Doe</h6>
+                          
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                           </p>
+                          <button class="btn btn-primary"  onclick="addToCart(item45)">Save Course</button>
+                          <a class="btn btn-primary" href="expresscourse.html">View this course</a> 
+                 </div>     
+         </div>
+            <hr>
+
+
+
                     
-                    <div class="col-md-8 my-4">
-                            <h4 class="course-title">Express JS</h4>
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item46">
+                     <img src="../courses image/ember.jpg" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Ember &nbsp; Price: 1,000,000</title>
+                  </div>
+        
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">Ember</h4>
+                         
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
+                        
+                           <h6 class="text-dark">John Doe</h6>
+                          
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                           </p>
+                          <button class="btn btn-primary"  onclick="addToCart(item46)">Save Course</button>
+                          <a class="btn btn-primary" href="embercourse.html">View this course</a> 
+                 </div>     
+         </div>
+            <hr>
 
-                            <div class="course-rating">
-                                <span class="average-rating">(4.5)</span>
-                                <i class="fas fa-star" aria-hidden="true"></i>
-                                <i class="fas fa-star" aria-hidden="true"></i>
-                                <i class="fas fa-star" aria-hidden="true"></i>
-                                <i class="fas fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                <span class="reviews text-muted">590 Ratings</span>
-                            </div>
+
                     
-                            <h6 class="text-dark">John Doe</h6>
-                            
-                            <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                            <a class="btn btn-primary" href="expresscourse.html">View this course</a>
-
-                            
-                    </div>     
-            </div>
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item47">
+                     <img src="../courses image/next.png" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Next JS &nbsp; Price: 1,000,000</title>
+                  </div>
+        
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">Next JS</h4>
+                         
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
+                        
+                           <h6 class="text-dark">John Doe</h6>
+                          
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                           </p>
+                          <button class="btn btn-primary"  onclick="addToCart(item47)">Save Course</button>
+                          <a class="btn btn-primary" href="nextcourse.html">View this course</a> 
+                 </div>     
+         </div>
             <hr>
 
 
 
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/ember.jpg" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Ember</h4>
+                    
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item48">
+                     <img src="../courses image/node.png" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Node JS &nbsp; Price: 1,000,000</title>
+                  </div>
         
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="embercourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
-            <hr>
-
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/next.png" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Next JS</h4>
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">Node JS</h4>
+                         
         
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
                         
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="nextcourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
+                           <h6 class="text-dark">John Doe</h6>
+                          
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                           </p>
+                          <button class="btn btn-primary"  onclick="addToCart(item48)">Save Course</button>
+                          <a class="btn btn-primary" href="nodecourse.html">View this course</a> 
+                 </div>     
+         </div>
             <hr>
 
 
 
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/node.png" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Node JS</h4>
+                    
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item49">
+                     <img src="../courses image/php.jpg" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">PHP &nbsp; Price: 1,000,000</title>
+                  </div>
         
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">PHP</h4>
+                         
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
                         
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="nodecourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
+                           <h6 class="text-dark">John Doe</h6>
+                          
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                           </p>
+                          <button class="btn btn-primary"  onclick="addToCart(item49)">Save Course</button>
+                          <a class="btn btn-primary" href="phpcourse.html">View this course</a> 
+                 </div>     
+         </div>
+            <hr>
+
+
+                    
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item50">
+                     <img src="../courses image/ruby.png" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Ruby &nbsp; Price: 1,000,000</title>
+                  </div>
+        
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">Ruby</h4>
+                         
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
+                        
+                           <h6 class="text-dark">John Doe</h6>
+                          
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                           </p>
+                          <button class="btn btn-primary"  onclick="addToCart(item50)">Save Course</button>
+                          <a class="btn btn-primary" href="rubycourse.html">View this course</a> 
+                 </div>     
+         </div>
+            <hr>
+
+
+                   
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item51">
+                     <img src="../courses image/python.png" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Svelte &nbsp; Price: 1,000,000</title>
+                  </div>
+        
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">Python</h4>
+                         
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
+                        
+                           <h6 class="text-dark">John Doe</h6>
+                          
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                           </p>
+                          <button class="btn btn-primary"  onclick="addToCart(item51)">Save Course</button>
+                          <a class="btn btn-primary" href="pythoncourse.html">View this course</a> 
+                 </div>     
+         </div>
+            <hr>
+
+
+                    
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item55">
+                     <img src="../courses image/java.cms" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Java &nbsp; Price: 1,000,000</title>
+                  </div>
+        
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">Java</h4>
+                         
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
+                        
+                           <h6 class="text-dark">John Doe</h6>
+                          
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                           </p>
+                          <button class="btn btn-primary"  onclick="addToCart(item55)">Save Course</button>
+                          <a class="btn btn-primary" href="javacourse.html">View this course</a> 
+                 </div>     
+         </div>
             <hr>
 
 
 
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/php.jpg" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">PHP</h4>
+                    
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item56">
+                     <img src="../courses image/solidity.png" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Solidity &nbsp; Price: 1,000,000</title>
+                  </div>
         
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">Solidity</h4>
+                         
+        
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
                         
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="phpcourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
+                           <h6 class="text-dark">John Doe</h6>
+                          
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                           </p>
+                          <button class="btn btn-primary"  onclick="addToCart(item56)">Save Course</button>
+                          <a class="btn btn-primary" href="soliditycourse.html">View this course</a> 
+                 </div>     
+         </div>
             <hr>
 
 
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/ruby.png" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Ruby</h4>
+                    
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="" id="item57">
+                     <img src="../courses image/kotlin.png" width="350" class="my-3 img-fluid rounded shadow">
+                 <title class="" id="title">Svelte &nbsp; Price: 1,000,000</title>
+                  </div>
         
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="rubycourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
-            <hr>
-
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/python.png" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Python</h4>
+                 </div>
+                 
+                 <div class="col-md-8 my-4">
+                         <h4 class="course-title" id="title">Kotlin</h4>
+                         
         
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
+                         <div class="course-rating">
+                             <span class="average-rating">(4.5)</span>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fas fa-star" aria-hidden="true"></i>
+                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                             <span class="reviews text-muted">590 Ratings</span>
+                           </div>
+                           
                         
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="pythoncourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
-            <hr>
-
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/java.cms" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Java</h4>
-        
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="javacourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
-            <hr>
-
-
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/solidity.png" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Solidity</h4>
-        
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="soliditycourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
-            <hr>
-
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="../courses image/kotlin.png" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Kotlin</h4>
-        
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="kotlincourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
+                           <h6 class="text-dark">John Doe</h6>
+                          
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                           </p>
+                          <button class="btn btn-primary"  onclick="addToCart(item57)">Save Course</button>
+                          <a class="btn btn-primary" href="kotlincourse.html">View this course</a> 
+                 </div>     
+         </div>
             <hr>
         </div>
  </div>
@@ -1553,6 +1929,7 @@
 
 
         <script src="../bootstrap/bootstrap.min.js"></script>
+        <script src="../js/cart.js"></script>
         <script src="https://kit.fontawesome.com/cbc56ed82a.js" crossorigin="anonymous"></script>
 </body>
 </html>

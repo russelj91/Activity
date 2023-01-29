@@ -50,7 +50,6 @@ font-size: 30px;
 .card-img-top{
   height: 100%;
   width: 100%;
-  background-size: 100%;
   border-radius: inherit;
   transition: all ease-in-out .4s;
 }
@@ -82,4 +81,39 @@ font-size: 30px;
   color: black;
   margin: 0 auto;
   text-decoration: none;
+}
+
+
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+
+
+.title{
+  font-weight: bold;
+  margin: 20px;
+}
+
+.cartImg > img{
+  width: 200px;
+}
+
+
+button{
+  border: 2px solid blue;
+  background:  blue;
+  color: wheat;
+  margin: 20px;
+  padding: 5px 10px;
+  
+
+
+}
+
+button:hover{
+  box-shadow: 0 0 5px 5px violet;
 }
