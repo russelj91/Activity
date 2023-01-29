@@ -39,6 +39,6 @@ let addItemId = 0;
 
 
     function noTice() {
-      alert("Before proceeding, remember that refreshing the page will remove the Save Courses! Remember the courses before deleting!");
+      alert("Reminder before proceeding! \n 1.Remember that refreshing this page without logging in  will remove the Save Courses! \n 2.Remember the courses before deleting!");
     }
 
