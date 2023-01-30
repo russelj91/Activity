@@ -48,7 +48,7 @@ let addItemId = 0;
   let image = document.querySelector('#imgClickAndChange');
     
   function changeImage() {
-      image.src = 'red.gif';
+      image.src = 'folder1.png';
   }
 
   

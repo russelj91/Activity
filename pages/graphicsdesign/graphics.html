@@ -59,11 +59,38 @@
           <a class="nav-link" href="#" >Login</a>
        </li>
 
-        <li class="nav-link" href="#">
-            <a class="nav-link" href="#" >FAQ</a>
-        </li>
+     
        </div>
 </ul>
+   <!-- modal-->
+                          <!-- Button trigger modal -->
+                          <button type="button" class="btn btn-none" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="noTice()">
+                            <img class="img-fluid w-20" id="imgClickAndChange" src="folder.png" width="30">
+                            <span class='badge badge-warning' id='lblCartCount'><div id="total-count"></div></span>
+                          </button>
+    
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"  >
+                            <div class="modal-dialog" role="document" >
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Save Courses</h5>
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="cart text-center" id="cart">
+                                    <div id="title" class="fw-bold text-secondary"></div>
+                                  
+                                </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="document.getElementById('imgClickAndChange').src='folder.png'">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+   <!--modal end-->
 </nav>
 
 <!--POPULAR START-->
@@ -92,117 +119,156 @@
                     <div class="row my-5">
 
 
-                        <div class="col-md">
-                          
-                          <div class="card shadow" style="width: 18rem; height: 28rem;">
+                      <div class="col-md">
+                        <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                          <div class="card shadow" style="width: 18rem; height: 28rem;" id="item78">
                             <img src="image/production.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <h5 class="card-title">Production Artist</h5>
-                              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                            <div class="card-body">
-                              <a href="productioncourse.html" class="btn btn-primary card-link">Details</a>
-                              <a href="#" class="btn btn-primary card-link">Save Course</a>
-                            </div>
+                            <h5 class="card-title mx-auto" id="title">Production Artist</h5>  
+                           <div>
+                            <label> 
+                              <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                              <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                           </label>
                           </div>
                         </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              <div class="course-rating">
+                                  <span class="average-rating">(4.5)</span>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                  <span class="reviews text-muted">590 Ratings</span>
+                              </div>
+                            </li>
+                          </ul>
+                       
+                        
+                        <div class="card-body mx-auto">
+                          <button class="btn btn-primary"  onclick="addToCart(item78);changeImage()" id="imgClickAndChange">Save Course</button>
+                        <a href="productioncourse.html" class="btn btn-primary card-link">Details</a>
+                      </div>
+                        
+                    </div>
+                        </div>
+                      </div>
 
-                        <div class="col-md">
-                          <div class="card shadow" style="width: 18rem; height: 28rem;">
+                      <div class="col-md">
+                        <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                          <div class="card shadow" style="width: 18rem; height: 28rem;" id="item79">
                             <img src="image/animator.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <h5 class="card-title">Animator</h5>
-                              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias adipisci quisquam aut nemo soluta totam quam explicabo numquam consequatur quaerat!</p>
-                            </div>
-                                  <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
+                            <h5 class="card-title mx-auto" id="title">Animator</h5>  
+                           <div>
+                            <label> 
+                              <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                              <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                           </label>
+                          </div>
+                        </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              <div class="course-rating">
+                                  <span class="average-rating">(4.5)</span>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                  <span class="reviews text-muted">590 Ratings</span>
+                              </div>
+                            </li>
+                          </ul>
+                       
+                        
+                        <div class="card-body mx-auto">
+                          <button class="btn btn-primary"  onclick="addToCart(item79);changeImage()" id="imgClickAndChange">Save Course</button>
+                        <a href="animatorcourse.html" class="btn btn-primary card-link">Details</a>
+                      </div>
+                        
+                    </div>
+                        </div>
+                      </div>
 
+
+                      <div class="col-md">
+                        <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                          <div class="card shadow" style="width: 18rem; height: 28rem;" id="item80">
+                            <img src="image/multimedia.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <a href="animatorcourse.html" class="btn btn-primary card-link">Details</a>
-                              <a href="#" class="btn btn-primary card-link">Save Course</a>
-                            </div>
+                            <h5 class="card-title mx-auto" id="title">Multimedia</h5>  
+                           <div>
+                            <label> 
+                              <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                              <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                           </label>
                           </div>
+                        </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              <div class="course-rating">
+                                  <span class="average-rating">(4.5)</span>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                  <span class="reviews text-muted">590 Ratings</span>
+                              </div>
+                            </li>
+                          </ul>
+                       
+                        
+                        <div class="card-body mx-auto">
+                          <button class="btn btn-primary"  onclick="addToCart(item80);changeImage()" id="imgClickAndChange">Save Course</button>
+                        <a href="multimediacourse.html" class="btn btn-primary card-link">Details</a>
+                      </div>
+                        
+                    </div>
+                        </div>
+                      </div>
+
+
+
+                      <div class="col-md">
+                        <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                          <div class="card shadow" style="width: 18rem; height: 28rem;" id="item81">
+                            <img src="image/logo.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title mx-auto" id="title">Logo Design</h5>  
+                           <div>
+                            <label> 
+                              <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                              <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                           </label>
                           </div>
-
-
-                          <div class="col-md">
-                            <div class="card shadow" style="width: 18rem; height: 28rem;">
-                              <img src="image/multimedia.jpg" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Multimedia</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur  elit. Magni, architecto inventore illum nostrum cumque ratione! Cupiditate repudiandae aut consequatur voluptas!</p>
+                        </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              <div class="course-rating">
+                                  <span class="average-rating">(4.5)</span>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                  <span class="reviews text-muted">590 Ratings</span>
                               </div>
-                                     <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                              <div class="card-body">
-                                <a href="multimediacourse.html" class="btn btn-primary card-link">Details</a>
-                                <a href="#" class="btn btn-primary card-link">Save Course</a>
-                              </div>
-                            </div>
-                          </div>
-
-
-
-                          <div class="col-md">
-                            <div class="card shadow" style="width: 18rem; height: 28rem;">
-                              <img src="image/logo.jpg" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Logo Design</h5>
-                                <p class="card-text">Lorem ipsum dolor sit  ratione animi! Facere exercitationem non illum quos numquam ea minus eligendi?</p>
-                              </div>
-                                     <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                              <div class="card-body">
-                                <a href="logocourse.html" class="btn btn-primary card-link">Details</a>
-                                <a href="#" class="btn btn-primary card-link">Save Course</a>
-                              </div>
-                            </div>
-                            </div>
+                            </li>
+                          </ul>
+                       
+                        
+                        <div class="card-body mx-auto">
+                          <button class="btn btn-primary"  onclick="addToCart(item81);changeImage()" id="imgClickAndChange">Save Course</button>
+                        <a href="logocourse.html" class="btn btn-primary card-link">Details</a>
+                      </div>
+                        
+                    </div>
+                        </div>
+                      </div>
                         </div>
                     </div>
                 </div>
@@ -216,117 +282,156 @@
                         <div class="row my-5">
 
 
-                            <div class="col-md">
-                            
-                            <div class="card shadow" style="width: 18rem; height: 28rem;">
+                          <div class="col-md">
+                            <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                              <div class="card shadow" style="width: 18rem; height: 28rem;" id="item82">
                                 <img src="image/production.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                <h5 class="card-title">Production Artist</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
-                                </div>
-                                      <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                                <div class="card-body">
-                                    <a href="productioncourse.html" class="btn btn-primary card-link">Details</a>
-                                <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                </div>
+                                <h5 class="card-title mx-auto" id="title">Production Artist</h5>  
+                               <div>
+                                <label> 
+                                  <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                  <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                               </label>
+                              </div>
                             </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="course-rating">
+                                      <span class="average-rating">(4.5)</span>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                      <span class="reviews text-muted">590 Ratings</span>
+                                  </div>
+                                </li>
+                              </ul>
+                           
+                            
+                            <div class="card-body mx-auto">
+                              <button class="btn btn-primary"  onclick="addToCart(item82);changeImage()" id="imgClickAndChange">Save Course</button>
+                            <a href="productioncourse.html" class="btn btn-primary card-link">Details</a>
+                          </div>
+                            
+                        </div>
                             </div>
+                          </div>
 
-                            <div class="col-md">
-                            <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                <img src="image/animator.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <h5 class="card-title">Animator</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias adipisci quisquam aut nemo soluta totam quam explicabo numquam consequatur quaerat!</p>
-                                </div>
-                                       <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                                <div class="card-body">
-                                    <a href="animatorcourse.html" class="btn btn-primary card-link">Details</a>
-                                <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                </div>
-                            </div>
-                            </div>
-
-
-                            <div class="col-md">
-                                <div class="card shadow" style="width: 18rem; height: 28rem;">
+                          <div class="col-md">
+                            <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                              <div class="card shadow" style="width: 18rem; height: 28rem;" id="item83">
                                 <img src="image/multimedia.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Multimedia</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur  elit. Magni, architecto inventore illum nostrum cumque ratione! Cupiditate repudiandae aut consequatur voluptas!</p>
-                                </div>
-                                       <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                                <div class="card-body">
-                                    <a href="multimediacourse.html" class="btn btn-primary card-link">Details</a>
-                                    <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                </div>
-                                </div>
+                                <h5 class="card-title mx-auto" id="title">Multi Media</h5>  
+                               <div>
+                                <label> 
+                                  <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                  <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                               </label>
+                              </div>
                             </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="course-rating">
+                                      <span class="average-rating">(4.5)</span>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                      <span class="reviews text-muted">590 Ratings</span>
+                                  </div>
+                                </li>
+                              </ul>
+                           
+                            
+                            <div class="card-body mx-auto">
+                              <button class="btn btn-primary"  onclick="addToCart(item83);changeImage()" id="imgClickAndChange">Save Course</button>
+                            <a href="multimediacourse.html" class="btn btn-primary card-link">Details</a>
+                          </div>
+                            
+                        </div>
+                            </div>
+                          </div>
+
+
+                          <div class="col-md">
+                            <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                              <div class="card shadow" style="width: 18rem; height: 28rem;" id="item84">
+                                <img src="image/animator.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title mx-auto" id="title">Animator</h5>  
+                               <div>
+                                <label> 
+                                  <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                  <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                               </label>
+                              </div>
+                            </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="course-rating">
+                                      <span class="average-rating">(4.5)</span>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                      <span class="reviews text-muted">590 Ratings</span>
+                                  </div>
+                                </li>
+                              </ul>
+                           
+                            
+                            <div class="card-body mx-auto">
+                              <button class="btn btn-primary"  onclick="addToCart(item84);changeImage()" id="imgClickAndChange">Save Course</button>
+                            <a href="animatorcourse.html" class="btn btn-primary card-link">Details</a>
+                          </div>
+                            
+                        </div>
+                            </div>
+                          </div>
 
 
 
-                            <div class="col-md">
-                                <div class="card shadow" style="width: 18rem; height: 28rem;">
+                          <div class="col-md">
+                            <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                              <div class="card shadow" style="width: 18rem; height: 28rem;" id="item85">
                                 <img src="image/logo.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Logo Design</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet  ratione animi! Facere exercitationem non illum quos numquam ea minus eligendi?</p>
-                                </div>
-                                       <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                                <div class="card-body">
-                                    <a href="logocourse.html" class="btn btn-primary card-link">Details</a>
-                                    <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                </div>
-                                </div>
-                                </div>
+                                <h5 class="card-title mx-auto" id="title">Logo Design</h5>  
+                               <div>
+                                <label> 
+                                  <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                  <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                               </label>
+                              </div>
+                            </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="course-rating">
+                                      <span class="average-rating">(4.5)</span>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                      <span class="reviews text-muted">590 Ratings</span>
+                                  </div>
+                                </li>
+                              </ul>
+                           
+                            
+                            <div class="card-body mx-auto">
+                              <button class="btn btn-primary"  onclick="addToCart(item85);changeImage()" id="imgClickAndChange">Save Course</button>
+                            <a href="logocourse.html" class="btn btn-primary card-link">Details</a>
+                          </div>
+                            
+                        </div>
+                            </div>
+                          </div>
                             </div>
 
             </div> 
@@ -340,120 +445,156 @@
                         <div class="row my-5">
 
 
-                            <div class="col-md">
-                          
-                                <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                  <img src="image/production.png" class="card-img-top" alt="...">
-                                  <div class="card-body">
-                                    <h5 class="card-title">Production Artist</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
-                                  </div>
-                                  <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                      <div class="course-rating">
-                                          <span class="average-rating">(4.5)</span>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                          <span class="reviews text-muted">590 Ratings</span>
-                                      </div></li>
-                                  </ul>
-      
-                                  <div class="card-body">
-                                    <a href="productioncourse.html" class="btn btn-primary card-link">Details</a>
-                                    <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                  </div>
-                                </div>
+                          <div class="col-md">
+                            <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                              <div class="card shadow" style="width: 18rem; height: 28rem;" id="item86">
+                                <img src="image/production.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title mx-auto" id="title">Production Artist</h5>  
+                               <div>
+                                <label> 
+                                  <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                  <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                               </label>
                               </div>
+                            </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="course-rating">
+                                      <span class="average-rating">(4.5)</span>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                      <span class="reviews text-muted">590 Ratings</span>
+                                  </div>
+                                </li>
+                              </ul>
+                           
+                            
+                            <div class="card-body mx-auto">
+                              <button class="btn btn-primary"  onclick="addToCart(item86);changeImage()" id="imgClickAndChange">Save Course</button>
+                            <a href="productioncourse.html" class="btn btn-primary card-link">Details</a>
+                          </div>
+                            
+                        </div>
+                            </div>
+                          </div>
 
-                              <div class="col-md">
-                          
-                                <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                  <img src="image/animator.jpg" class="card-img-top" alt="...">
-                                  <div class="card-body">
-                                    <h5 class="card-title">Animator</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
-                                  </div>
-                                  <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                      <div class="course-rating">
-                                          <span class="average-rating">(4.5)</span>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                          <span class="reviews text-muted">590 Ratings</span>
-                                      </div></li>
-                                  </ul>
-      
-                                  <div class="card-body">
-                                    <a href="animatorcourse.html" class="btn btn-primary card-link">Details</a>
-                                    <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                  </div>
-                                </div>
+                          <div class="col-md">
+                            <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                              <div class="card shadow" style="width: 18rem; height: 28rem;" id="item87">
+                                <img src="image/animator.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title mx-auto" id="title">Animator</h5>  
+                               <div>
+                                <label> 
+                                  <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                  <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                               </label>
                               </div>
+                            </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="course-rating">
+                                      <span class="average-rating">(4.5)</span>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                      <span class="reviews text-muted">590 Ratings</span>
+                                  </div>
+                                </li>
+                              </ul>
+                           
+                            
+                            <div class="card-body mx-auto">
+                              <button class="btn btn-primary"  onclick="addToCart(item87);changeImage()" id="imgClickAndChange">Save Course</button>
+                            <a href="animatorcourse.html" class="btn btn-primary card-link">Details</a>
+                          </div>
+                            
+                        </div>
+                            </div>
+                          </div>
 
 
-                              <div class="col-md">
-                          
-                                <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                  <img src="image/multimedia.jpg" class="card-img-top" alt="...">
-                                  <div class="card-body">
-                                    <h5 class="card-title">Multimedia</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
-                                  </div>
-                                  <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                      <div class="course-rating">
-                                          <span class="average-rating">(4.5)</span>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                          <span class="reviews text-muted">590 Ratings</span>
-                                      </div></li>
-                                  </ul>
-      
-                                  <div class="card-body">
-                                    <a href="multimediacourse.html" class="btn btn-primary card-link">Details</a>
-                                    <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                  </div>
-                                </div>
+                          <div class="col-md">
+                            <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                              <div class="card shadow" style="width: 18rem; height: 28rem;" id="item88">
+                                <img src="image/multimedia.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title mx-auto" id="title">Multimedia</h5>  
+                               <div>
+                                <label> 
+                                  <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                  <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                               </label>
                               </div>
-
-
-
-                              <div class="col-md">
-                          
-                                <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                  <img src="image/logo.jpg" class="card-img-top" alt="...">
-                                  <div class="card-body">
-                                    <h5 class="card-title">Logo Design</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
+                            </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="course-rating">
+                                      <span class="average-rating">(4.5)</span>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                      <span class="reviews text-muted">590 Ratings</span>
                                   </div>
-                                  <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                      <div class="course-rating">
-                                          <span class="average-rating">(4.5)</span>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                          <span class="reviews text-muted">590 Ratings</span>
-                                      </div></li>
-                                  </ul>
-      
-                                  <div class="card-body">
-                                    <a href="logocourse.html" class="btn btn-primary card-link">Details</a>
-                                    <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                  </div>
-                                </div>
+                                </li>
+                              </ul>
+                           
+                            
+                            <div class="card-body mx-auto">
+                              <button class="btn btn-primary"  onclick="addToCart(item88);changeImage()" id="imgClickAndChange">Save Course</button>
+                            <a href="multimediacourse.html" class="btn btn-primary card-link">Details</a>
+                          </div>
+                            
+                        </div>
+                            </div>
+                          </div>
+
+
+
+                          <div class="col-md">
+                            <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                              <div class="card shadow" style="width: 18rem; height: 28rem;" id="item89">
+                                <img src="image/logo.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title mx-auto" id="title">Logo Design</h5>  
+                               <div>
+                                <label> 
+                                  <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                  <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                               </label>
                               </div>
+                            </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="course-rating">
+                                      <span class="average-rating">(4.5)</span>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                      <span class="reviews text-muted">590 Ratings</span>
+                                  </div>
+                                </li>
+                              </ul>
+                           
+                            
+                            <div class="card-body mx-auto">
+                              <button class="btn btn-primary"  onclick="addToCart(item89);changeImage()" id="imgClickAndChange">Save Course</button>
+                            <a href="logocourse.html" class="btn btn-primary card-link">Details</a>
+                          </div>
+                            
+                        </div>
+                            </div>
+                          </div>
                             </div>
                         </div>
                         </div>
@@ -466,121 +607,155 @@
 
                             <div class="row my-5">
 
-
-                                <div class="col-md">
-                          
-                                    <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                      <img src="image/production.png" class="card-img-top" alt="...">
-                                      <div class="card-body">
-                                        <h5 class="card-title">Production Artist</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
-                                      </div>
-                                      <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                          <div class="course-rating">
-                                              <span class="average-rating">(4.5)</span>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                              <span class="reviews text-muted">590 Ratings</span>
-                                          </div></li>
-                                      </ul>
-          
-                                      <div class="card-body">
-                                        <a href="productioncourse.html" class="btn btn-primary card-link">Details</a>
-                                        <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                      </div>
-                                    </div>
+                              <div class="col-md">
+                                <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                                  <div class="card shadow" style="width: 18rem; height: 28rem;" id="item90">
+                                    <img src="image/production.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title mx-auto" id="title">Production Artist</h5>  
+                                   <div>
+                                    <label> 
+                                      <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                      <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                                   </label>
                                   </div>
-    
-                                  <div class="col-md">
-                          
-                                    <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                      <img src="image/animator.jpg" class="card-img-top" alt="...">
-                                      <div class="card-body">
-                                        <h5 class="card-title">Animator</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
+                                </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                      <div class="course-rating">
+                                          <span class="average-rating">(4.5)</span>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                          <span class="reviews text-muted">590 Ratings</span>
                                       </div>
-                                      <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                          <div class="course-rating">
-                                              <span class="average-rating">(4.5)</span>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                              <span class="reviews text-muted">590 Ratings</span>
-                                          </div></li>
-                                      </ul>
-          
-                                      <div class="card-body">
-                                        <a href="animatorcourse.html" class="btn btn-primary card-link">Details</a>
-                                        <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                      </div>
-                                    </div>
+                                    </li>
+                                  </ul>
+                               
+                                
+                                <div class="card-body mx-auto">
+                                  <button class="btn btn-primary"  onclick="addToCart(item90);changeImage()" id="imgClickAndChange">Save Course</button>
+                                <a href="productioncourse.html" class="btn btn-primary card-link">Details</a>
+                              </div>
+                                
+                            </div>
+                                </div>
+                              </div>
+                              <div class="col-md">
+                                <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                                  <div class="card shadow" style="width: 18rem; height: 28rem;" id="item91">
+                                    <img src="image/multimedia.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title mx-auto" id="title">Multi Media</h5>  
+                                   <div>
+                                    <label> 
+                                      <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                      <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                                   </label>
                                   </div>
+                                </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                      <div class="course-rating">
+                                          <span class="average-rating">(4.5)</span>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                          <span class="reviews text-muted">590 Ratings</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                               
+                                
+                                <div class="card-body mx-auto">
+                                  <button class="btn btn-primary"  onclick="addToCart(item91);changeImage()" id="imgClickAndChange">Save Course</button>
+                                <a href="multimediacourse.html" class="btn btn-primary card-link">Details</a>
+                              </div>
+                                
+                            </div>
+                                </div>
+                              </div>
     
     
-                                  <div class="col-md">
-                          
-                                    <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                      <img src="image/multimedia.jpg" class="card-img-top" alt="...">
-                                      <div class="card-body">
-                                        <h5 class="card-title">Multimedia</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
-                                      </div>
-                                      <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                          <div class="course-rating">
-                                              <span class="average-rating">(4.5)</span>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                              <span class="reviews text-muted">590 Ratings</span>
-                                          </div></li>
-                                      </ul>
-          
-                                      <div class="card-body">
-                                        <a href="multimediacourse.html" class="btn btn-primary card-link">Details</a>
-                                        <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                      </div>
-                                    </div>
+                              <div class="col-md">
+                                <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                                  <div class="card shadow" style="width: 18rem; height: 28rem;" id="item92">
+                                    <img src="image/animator.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title mx-auto" id="title">Animator</h5>  
+                                   <div>
+                                    <label> 
+                                      <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                      <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                                   </label>
                                   </div>
-    
-    
-    
-                                  <div class="col-md">
-                          
-                                    <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                      <img src="image/logo.jpg" class="card-img-top" alt="...">
-                                      <div class="card-body">
-                                        <h5 class="card-title">Logo Design</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
+                                </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                      <div class="course-rating">
+                                          <span class="average-rating">(4.5)</span>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                          <span class="reviews text-muted">590 Ratings</span>
                                       </div>
-                                      <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                          <div class="course-rating">
-                                              <span class="average-rating">(4.5)</span>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                              <span class="reviews text-muted">590 Ratings</span>
-                                          </div></li>
-                                      </ul>
-          
-                                      <div class="card-body">
-                                        <a href="logocourse.html" class="btn btn-primary card-link">Details</a>
-                                        <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                      </div>
-                                    </div>
+                                    </li>
+                                  </ul>
+                               
+                                
+                                <div class="card-body mx-auto">
+                                  <button class="btn btn-primary"  onclick="addToCart(item92);changeImage()" id="imgClickAndChange">Save Course</button>
+                                <a href="animatorcourse.html" class="btn btn-primary card-link">Details</a>
+                              </div>
+                                
+                            </div>
+                                </div>
+                              </div>
+    
+    
+    
+                              <div class="col-md">
+                                <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                                  <div class="card shadow" style="width: 18rem; height: 28rem;" id="item93">
+                                    <img src="image/logo.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title mx-auto" id="title">Logo Design</h5>  
+                                   <div>
+                                    <label> 
+                                      <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                      <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                                   </label>
                                   </div>
+                                </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                      <div class="course-rating">
+                                          <span class="average-rating">(4.5)</span>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                          <span class="reviews text-muted">590 Ratings</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                               
+                                
+                                <div class="card-body mx-auto">
+                                  <button class="btn btn-primary"  onclick="addToCart(item93);changeImage()" id="imgClickAndChange">Save Course</button>
+                                <a href="logocourse.html" class="btn btn-primary card-link">Details</a>
+                              </div>
+                                
+                            </div>
+                                </div>
+                              </div>
                                 </div>
 
 
@@ -610,117 +785,139 @@
 
 
         <div class="col-md mx-2 shadow">
-        <div class="row">
-               <div class="col-md-4">
-                    <img src="image/production.png" width="350" class="my-3 img-fluid rounded shadow">
-                </div>
-                
-                <div class="col-md-8 my-4">
-                        <h4 class="course-title">Production Artist</h4>
+          <div class="row">
+            <div class="col-md-4">
+             <div class="" id="item94">
+                 <img src="image/production.png" width="350" class="my-3 img-fluid rounded shadow">
+             <title class="" id="title">Production Artist &nbsp; Price: 1,000,000</title>
+              </div>
 
-                        <div class="course-rating">
-                            <span class="average-rating">(4.5)</span>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                            <span class="reviews text-muted">590 Ratings</span>
-                          </div>
-                
-                          <h6 class="text-dark">John Doe</h6>
+             </div>
+             
+             <div class="col-md-8 my-4">
+                     <h4 class="course-title" id="title">Production Artist</h4>
+                     
+
+                     <div class="course-rating">
+                         <span class="average-rating">(4.5)</span>
+                         <i class="fas fa-star" aria-hidden="true"></i>
+                         <i class="fas fa-star" aria-hidden="true"></i>
+                         <i class="fas fa-star" aria-hidden="true"></i>
+                         <i class="fas fa-star" aria-hidden="true"></i>
+                         <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                         <span class="reviews text-muted">590 Ratings</span>
+                       </div>
                        
-                         <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                         <a class="btn btn-primary" href="productioncourse.html">View this course</a>
-       
-                        
-                </div>     
-        </div>
+                    
+                       <h6 class="text-dark">John Doe</h6>
+                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                     </p>
+                     
+                     <button class="btn btn-primary"  onclick="addToCart(item94);changeImage()" id="imgClickAndChange">Save Course</button>
+                      <a class="btn btn-primary" href="productioncourse.html">View this course</a> 
+             </div>     
+     </div>
     <hr>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="image/animator.jpg" width="350" class="my-3 img-fluid rounded shadow">
-                </div>
-                
-                <div class="col-md-8 my-4">
-                        <h4 class="course-title">Animator</h4>
-
-                        <div class="course-rating">
-                            <span class="average-rating">(4.5)</span>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                            <span class="reviews text-muted">590 Ratings</span>
-                        </div>
-                
-                        <h6 class="text-dark">John Doe</h6>
-                        
-                        <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                        <a class="btn btn-primary" href="animatorcourse.html">View this course</a>
-
-                        
-                </div>     
+    <div class="row">
+      <div class="col-md-4">
+       <div class="" id="item95">
+           <img src="image/animator.jpg" width="350" class="my-3 img-fluid rounded shadow">
+       <title class="" id="title">Animator &nbsp; Price: 1,000,000</title>
         </div>
+
+       </div>
+       
+       <div class="col-md-8 my-4">
+               <h4 class="course-title" id="title">Animator</h4>
+               
+
+               <div class="course-rating">
+                   <span class="average-rating">(4.5)</span>
+                   <i class="fas fa-star" aria-hidden="true"></i>
+                   <i class="fas fa-star" aria-hidden="true"></i>
+                   <i class="fas fa-star" aria-hidden="true"></i>
+                   <i class="fas fa-star" aria-hidden="true"></i>
+                   <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                   <span class="reviews text-muted">590 Ratings</span>
+                 </div>
+                 
+              
+                 <h6 class="text-dark">John Doe</h6>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+               </p>
+               
+               <button class="btn btn-primary"  onclick="addToCart(item95);changeImage()" id="imgClickAndChange">Save Course</button>
+                <a class="btn btn-primary" href="animatorcourse.html">View this course</a> 
+       </div>     
+</div>
         <hr>
-
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="image/multimedia.jpg" width="350" class="my-3 img-fluid rounded shadow">
-                    </div>
-                    
-                    <div class="col-md-8 my-4">
-                            <h4 class="course-title">Multimedia</h4>
-
-                            <div class="course-rating">
-                                <span class="average-rating">(4.5)</span>
-                                <i class="fas fa-star" aria-hidden="true"></i>
-                                <i class="fas fa-star" aria-hidden="true"></i>
-                                <i class="fas fa-star" aria-hidden="true"></i>
-                                <i class="fas fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                <span class="reviews text-muted">590 Ratings</span>
-                            </div>
-                    
-                            <h6 class="text-dark">John Doe</h6>
-                            
-                            <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                            <a class="btn btn-primary" href="multimediacourse.html">View this course</a>
-            
-                            
-                    </div>     
+        <div class="row">
+          <div class="col-md-4">
+           <div class="" id="item96">
+               <img src="image/multimedia.jpg" width="350" class="my-3 img-fluid rounded shadow">
+           <title class="" id="title">Multimedia &nbsp; Price: 1,000,000</title>
             </div>
+
+           </div>
+           
+           <div class="col-md-8 my-4">
+                   <h4 class="course-title" id="title">Multimedia</h4>
+                   
+
+                   <div class="course-rating">
+                       <span class="average-rating">(4.5)</span>
+                       <i class="fas fa-star" aria-hidden="true"></i>
+                       <i class="fas fa-star" aria-hidden="true"></i>
+                       <i class="fas fa-star" aria-hidden="true"></i>
+                       <i class="fas fa-star" aria-hidden="true"></i>
+                       <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                       <span class="reviews text-muted">590 Ratings</span>
+                     </div>
+                     
+                  
+                     <h6 class="text-dark">John Doe</h6>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                   </p>
+                   
+                   <button class="btn btn-primary"  onclick="addToCart(item96);changeImage()" id="imgClickAndChange">Save Course</button>
+                    <a class="btn btn-primary" href="multimediacourse.html">View this course</a> 
+           </div>     
+   </div>
         <hr>
 
+        <div class="row">
+          <div class="col-md-4">
+           <div class="" id="item97">
+               <img src="image/logo.jpg" width="350" class="my-3 img-fluid rounded shadow">
+           <title class="" id="title">Logo Design &nbsp; Price: 1,000,000</title>
+            </div>
 
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="image/logo.jpg" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Logo Design</h4>
+           </div>
+           
+           <div class="col-md-8 my-4">
+                   <h4 class="course-title" id="title">Logo Design</h4>
+                   
 
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="logocourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
+                   <div class="course-rating">
+                       <span class="average-rating">(4.5)</span>
+                       <i class="fas fa-star" aria-hidden="true"></i>
+                       <i class="fas fa-star" aria-hidden="true"></i>
+                       <i class="fas fa-star" aria-hidden="true"></i>
+                       <i class="fas fa-star" aria-hidden="true"></i>
+                       <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                       <span class="reviews text-muted">590 Ratings</span>
+                     </div>
+                     
+                  
+                     <h6 class="text-dark">John Doe</h6>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                   </p>
+                   
+                   <button class="btn btn-primary"  onclick="addToCart(item97);changeImage()" id="imgClickAndChange">Save Course</button>
+                    <a class="btn btn-primary" href="logocourse.html">View this course</a> 
+           </div>     
+   </div>
             <hr>
 
 
@@ -797,7 +994,7 @@
         
 
 
-
+        <script src="../../js/cart.js"></script>
         <script src="../../bootstrap/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/cbc56ed82a.js" crossorigin="anonymous"></script>
 </body>
