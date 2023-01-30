@@ -42,3 +42,15 @@ let addItemId = 0;
       alert("Reminder before proceeding! \n 1.Remember that refreshing this page without logging in  will remove the Save Courses! \n 2.Remember the courses before deleting!");
     }
 
+
+
+
+  let image = document.querySelector('#imgClickAndChange');
+    
+  function changeImage() {
+      image.src = 'red.gif';
+  }
+
+  
+
+

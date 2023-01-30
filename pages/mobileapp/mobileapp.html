@@ -60,11 +60,38 @@
           <a class="nav-link" href="#" >Login</a>
        </li>
 
-        <li class="nav-link" href="#">
-            <a class="nav-link" href="#" >FAQ</a>
-        </li>
+        
        </div>
 </ul>
+<!-- modal-->
+                          <!-- Button trigger modal -->
+                          <button type="button" class="btn btn-none" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="noTice()">
+                            <img class="img-fluid w-20" id="imgClickAndChange" src="black.gif">
+                            <span class='badge badge-warning' id='lblCartCount'><div id="total-count"></div></span>
+                          </button>
+    
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"  >
+                            <div class="modal-dialog" role="document" >
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Save Courses</h5>
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="cart text-center" id="cart">
+                                    <div id="title" class="fw-bold text-secondary"></div>
+                                  
+                                </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="document.getElementById('imgClickAndChange').src='black.gif'">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                                                  <!--modal end-->
 </nav>
 
 <!--POPULAR START-->
@@ -93,117 +120,155 @@
                     <div class="row my-5">
 
 
-                        <div class="col-md">
-                          
-                          <div class="card shadow" style="width: 18rem; height: 28rem;">
-                            <img src="image/ios.svg" class="card-img-top" alt="...">
+                      <div class="col-md">
+                        <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                          <div class="card shadow" style="width: 18rem; height: 28rem;" id="item58">
+                            <img src="image/ios.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <h5 class="card-title">iOs Developer</h5>
-                              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                            <div class="card-body">
-                              <a href="ioscourse.html" class="btn btn-primary card-link">Details</a>
-                              <a href="#" class="btn btn-primary card-link">Save Course</a>
-                            </div>
+                            <h5 class="card-title mx-auto" id="title">iOs Developer</h5>  
+                           <div>
+                            <label> 
+                              <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                              <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                           </label>
                           </div>
                         </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              <div class="course-rating">
+                                  <span class="average-rating">(4.5)</span>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                  <span class="reviews text-muted">590 Ratings</span>
+                              </div>
+                            </li>
+                          </ul>
+                       
+                        
+                        <div class="card-body mx-auto">
+                          <button class="btn btn-primary"  onclick="addToCart(item58);changeImage()" id="imgClickAndChange">Save Course</button>
+                        <a href="ioscourse.html" class="btn btn-primary card-link">Details</a>
+                      </div>
+                        
+                    </div>
+                        </div>
+                      </div>
 
-                        <div class="col-md">
-                          <div class="card shadow" style="width: 18rem; height: 28rem;">
-                            <img src="image/android.svg" class="card-img-top" alt="...">
+                      <div class="col-md">
+                        <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                          <div class="card shadow" style="width: 18rem; height: 28rem;" id="item59">
+                            <img src="image/android.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <h5 class="card-title">Android Developer</h5>
-                              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias adipisci quisquam aut nemo soluta totam quam explicabo numquam consequatur quaerat!</p>
-                            </div>
-                                  <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
+                            <h5 class="card-title mx-auto" id="title">Android Developer</h5>  
+                           <div>
+                            <label> 
+                              <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                              <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                           </label>
+                          </div>
+                        </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              <div class="course-rating">
+                                  <span class="average-rating">(4.5)</span>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                  <span class="reviews text-muted">590 Ratings</span>
+                              </div>
+                            </li>
+                          </ul>
+                       
+                        
+                        <div class="card-body mx-auto">
+                          <button class="btn btn-primary"  onclick="addToCart(item59);changeImage()" id="imgClickAndChange">Save Course</button>
+                        <a href="androidcourse.html" class="btn btn-primary card-link">Details</a>
+                      </div>
+                        
+                    </div>
+                        </div>
+                      </div>
 
+                      <div class="col-md">
+                        <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                          <div class="card shadow" style="width: 18rem; height: 28rem;" id="item60">
+                            <img src="image/hybrid.webp" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <a href="androidcourse.html" class="btn btn-primary card-link">Details</a>
-                              <a href="#" class="btn btn-primary card-link">Save Course</a>
-                            </div>
+                            <h5 class="card-title mx-auto" id="title">Hybrid App Developer</h5>  
+                           <div>
+                            <label> 
+                              <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                              <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                           </label>
                           </div>
+                        </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              <div class="course-rating">
+                                  <span class="average-rating">(4.5)</span>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                  <span class="reviews text-muted">590 Ratings</span>
+                              </div>
+                            </li>
+                          </ul>
+                       
+                        
+                        <div class="card-body mx-auto">
+                          <button class="btn btn-primary"  onclick="addToCart(item60);changeImage()" id="imgClickAndChange">Save Course</button>
+                        <a href="hybridcourse.html" class="btn btn-primary card-link">Details</a>
+                      </div>
+                        
+                    </div>
+                        </div>
+                      </div>
+
+
+
+                      <div class="col-md">
+                        <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                          <div class="card shadow" style="width: 18rem; height: 28rem;" id="item61">
+                            <img src="image/remote.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title mx-auto" id="title">Remote App. Developer</h5>  
+                           <div>
+                            <label> 
+                              <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                              <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                           </label>
                           </div>
-
-
-                          <div class="col-md">
-                            <div class="card shadow" style="width: 18rem; height: 28rem;">
-                              <img src="image/hybrid.webp" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Hybrid App Developer</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur  elit. Magni, architecto inventore illum nostrum cumque ratione! Cupiditate repudiandae aut consequatur voluptas!</p>
+                        </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              <div class="course-rating">
+                                  <span class="average-rating">(4.5)</span>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fas fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                  <span class="reviews text-muted">590 Ratings</span>
                               </div>
-                                     <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                              <div class="card-body">
-                                <a href="hybridcourse.html" class="btn btn-primary card-link">Details</a>
-                                <a href="#" class="btn btn-primary card-link">Save Course</a>
-                              </div>
-                            </div>
-                          </div>
-
-
-
-                          <div class="col-md">
-                            <div class="card shadow" style="width: 18rem; height: 28rem;">
-                              <img src="image/remote.jpeg" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Remote Application Developer</h5>
-                                <p class="card-text">Lorem ipsum dolor sit  ratione animi! Facere exercitationem non illum quos numquam ea minus eligendi?</p>
-                              </div>
-                                     <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                              <div class="card-body">
-                                <a href="remotecourse.html" class="btn btn-primary card-link">Details</a>
-                                <a href="#" class="btn btn-primary card-link">Save Course</a>
-                              </div>
-                            </div>
-                            </div>
+                            </li>
+                          </ul>
+                       
+                        
+                        <div class="card-body mx-auto">
+                          <button class="btn btn-primary"  onclick="addToCart(item61);changeImage()" id="imgClickAndChange">Save Course</button>
+                        <a href="remotecourse.html" class="btn btn-primary card-link">Details</a>
+                      </div>
+                        
+                    </div>
+                        </div>
+                      </div>
                         </div>
                     </div>
                 </div>
@@ -217,117 +282,155 @@
                         <div class="row my-5">
 
 
-                            <div class="col-md">
+                          <div class="col-md">
+                            <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                              <div class="card shadow" style="width: 18rem; height: 28rem;" id="item62">
+                                <img src="image/ios.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title mx-auto" id="title">iOs Developer</h5>  
+                               <div>
+                                <label> 
+                                  <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                  <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                               </label>
+                              </div>
+                            </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="course-rating">
+                                      <span class="average-rating">(4.5)</span>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                      <span class="reviews text-muted">590 Ratings</span>
+                                  </div>
+                                </li>
+                              </ul>
+                           
                             
-                            <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                <img src="image/ios.svg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <h5 class="card-title">iOs Developer</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
-                                </div>
-                                      <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                                <div class="card-body">
-                                    <a href="ioscourse.html" class="btn btn-primary card-link">Details</a>
-                                <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                </div>
+                            <div class="card-body mx-auto">
+                              <button class="btn btn-primary"  onclick="addToCart(item62);changeImage()" id="imgClickAndChange">Save Course</button>
+                            <a href="ioscourse.html" class="btn btn-primary card-link">Details</a>
+                          </div>
+                            
+                        </div>
                             </div>
-                            </div>
+                          </div>
 
-                            <div class="col-md">
-                            <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                <img src="image/android.svg" class="card-img-top" alt="...">
+                          <div class="col-md">
+                            <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                              <div class="card shadow" style="width: 18rem; height: 28rem;" id="item63">
+                                <img src="image/android.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                <h5 class="card-title">Android Developer</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias adipisci quisquam aut nemo soluta totam quam explicabo numquam consequatur quaerat!</p>
-                                </div>
-                                       <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                                <div class="card-body">
-                                    <a href="androidcourse.html" class="btn btn-primary card-link">Details</a>
-                                <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                </div>
+                                <h5 class="card-title mx-auto" id="title">Android Developer</h5>  
+                               <div>
+                                <label> 
+                                  <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                  <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                               </label>
+                              </div>
                             </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="course-rating">
+                                      <span class="average-rating">(4.5)</span>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                      <span class="reviews text-muted">590 Ratings</span>
+                                  </div>
+                                </li>
+                              </ul>
+                           
+                            
+                            <div class="card-body mx-auto">
+                              <button class="btn btn-primary"  onclick="addToCart(item63);changeImage()" id="imgClickAndChange">Save Course</button>
+                            <a href="androidcourse.html" class="btn btn-primary card-link">Details</a>
+                          </div>
+                            
+                        </div>
                             </div>
+                          </div>
 
 
-                            <div class="col-md">
-                                <div class="card shadow" style="width: 18rem; height: 28rem;">
+                          <div class="col-md">
+                            <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                              <div class="card shadow" style="width: 18rem; height: 28rem;" id="item64">
                                 <img src="image/hybrid.webp" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Hybrid App Developer</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur  elit. Magni, architecto inventore illum nostrum cumque ratione! Cupiditate repudiandae aut consequatur voluptas!</p>
-                                </div>
-                                       <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                                <div class="card-body">
-                                    <a href="hybridcourse.html" class="btn btn-primary card-link">Details</a>
-                                    <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                </div>
-                                </div>
+                                <h5 class="card-title mx-auto" id="title">Hybrid App Developer</h5>  
+                               <div>
+                                <label> 
+                                  <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                  <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                               </label>
+                              </div>
                             </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="course-rating">
+                                      <span class="average-rating">(4.5)</span>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                      <span class="reviews text-muted">590 Ratings</span>
+                                  </div>
+                                </li>
+                              </ul>
+                           
+                            
+                            <div class="card-body mx-auto">
+                              <button class="btn btn-primary"  onclick="addToCart(item64);changeImage()" id="imgClickAndChange">Save Course</button>
+                            <a href="hybridcourse.html" class="btn btn-primary card-link">Details</a>
+                          </div>
+                            
+                        </div>
+                            </div>
+                          </div>
 
 
-
-                            <div class="col-md">
-                                <div class="card shadow" style="width: 18rem; height: 28rem;">
+                          <div class="col-md">
+                            <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                              <div class="card shadow" style="width: 18rem; height: 28rem;" id="item65">
                                 <img src="image/remote.jpeg" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Remote Application Developer</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet  ratione animi! Facere exercitationem non illum quos numquam ea minus eligendi?</p>
-                                </div>
-                                       <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div></li>
-                            </ul>
-
-                                <div class="card-body">
-                                    <a href="remotecourse.html" class="btn btn-primary card-link">Details</a>
-                                    <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                </div>
-                                </div>
-                                </div>
+                                <h5 class="card-title mx-auto" id="title">Remote App. Developer</h5>  
+                               <div>
+                                <label> 
+                                  <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                  <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                               </label>
+                              </div>
+                            </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="course-rating">
+                                      <span class="average-rating">(4.5)</span>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                      <span class="reviews text-muted">590 Ratings</span>
+                                  </div>
+                                </li>
+                              </ul>
+                           
+                            
+                            <div class="card-body mx-auto">
+                              <button class="btn btn-primary"  onclick="addToCart(item65);changeImage()" id="imgClickAndChange">Save Course</button>
+                            <a href="remotecourse.html" class="btn btn-primary card-link">Details</a>
+                          </div>
+                            
+                        </div>
+                            </div>
+                          </div>
                             </div>
 
             </div> 
@@ -341,120 +444,156 @@
                         <div class="row my-5">
 
 
-                            <div class="col-md">
-                          
-                                <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                  <img src="image/ios.svg" class="card-img-top" alt="...">
-                                  <div class="card-body">
-                                    <h5 class="card-title">iOs Developer</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
-                                  </div>
-                                  <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                      <div class="course-rating">
-                                          <span class="average-rating">(4.5)</span>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                          <span class="reviews text-muted">590 Ratings</span>
-                                      </div></li>
-                                  </ul>
-      
-                                  <div class="card-body">
-                                    <a href="ioscourse.html" class="btn btn-primary card-link">Details</a>
-                                    <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                  </div>
-                                </div>
+                          <div class="col-md">
+                            <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                              <div class="card shadow" style="width: 18rem; height: 28rem;" id="item66">
+                                <img src="image/ios.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title mx-auto" id="title">iOs Developer</h5>  
+                               <div>
+                                <label> 
+                                  <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                  <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                               </label>
                               </div>
+                            </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="course-rating">
+                                      <span class="average-rating">(4.5)</span>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                      <span class="reviews text-muted">590 Ratings</span>
+                                  </div>
+                                </li>
+                              </ul>
+                           
+                            
+                            <div class="card-body mx-auto">
+                              <button class="btn btn-primary"  onclick="addToCart(item66);changeImage()" id="imgClickAndChange">Save Course</button>
+                            <a href="ioscourse.html" class="btn btn-primary card-link">Details</a>
+                          </div>
+                            
+                        </div>
+                            </div>
+                          </div>
 
-                              <div class="col-md">
-                          
-                                <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                  <img src="image/android.svg" class="card-img-top" alt="...">
-                                  <div class="card-body">
-                                    <h5 class="card-title">Android Developer</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
-                                  </div>
-                                  <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                      <div class="course-rating">
-                                          <span class="average-rating">(4.5)</span>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                          <span class="reviews text-muted">590 Ratings</span>
-                                      </div></li>
-                                  </ul>
-      
-                                  <div class="card-body">
-                                    <a href="androidcourse.html" class="btn btn-primary card-link">Details</a>
-                                    <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                  </div>
-                                </div>
+                          <div class="col-md">
+                            <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                              <div class="card shadow" style="width: 18rem; height: 28rem;" id="item67">
+                                <img src="image/android.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title mx-auto" id="title">Android Developer</h5>  
+                               <div>
+                                <label> 
+                                  <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                  <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                               </label>
                               </div>
+                            </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="course-rating">
+                                      <span class="average-rating">(4.5)</span>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                      <span class="reviews text-muted">590 Ratings</span>
+                                  </div>
+                                </li>
+                              </ul>
+                           
+                            
+                            <div class="card-body mx-auto">
+                              <button class="btn btn-primary"  onclick="addToCart(item67);changeImage()" id="imgClickAndChange">Save Course</button>
+                            <a href="androidcourse.html" class="btn btn-primary card-link">Details</a>
+                          </div>
+                            
+                        </div>
+                            </div>
+                          </div>
 
 
-                              <div class="col-md">
-                          
-                                <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                  <img src="image/hybrid.webp" class="card-img-top" alt="...">
-                                  <div class="card-body">
-                                    <h5 class="card-title">Hybrid App Developer</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
-                                  </div>
-                                  <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                      <div class="course-rating">
-                                          <span class="average-rating">(4.5)</span>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                          <span class="reviews text-muted">590 Ratings</span>
-                                      </div></li>
-                                  </ul>
-      
-                                  <div class="card-body">
-                                    <a href="androidcourse.html" class="btn btn-primary card-link">Details</a>
-                                    <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                  </div>
-                                </div>
+                          <div class="col-md">
+                            <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                              <div class="card shadow" style="width: 18rem; height: 28rem;" id="item68">
+                                <img src="image/hybrid.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title mx-auto" id="title">Hybrid App Developer</h5>  
+                               <div>
+                                <label> 
+                                  <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                  <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                               </label>
                               </div>
-
-
-
-                              <div class="col-md">
-                          
-                                <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                  <img src="image/remote.jpeg" class="card-img-top" alt="...">
-                                  <div class="card-body">
-                                    <h5 class="card-title">Remote Application Developer</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
+                            </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="course-rating">
+                                      <span class="average-rating">(4.5)</span>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                      <span class="reviews text-muted">590 Ratings</span>
                                   </div>
-                                  <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                      <div class="course-rating">
-                                          <span class="average-rating">(4.5)</span>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fas fa-star" aria-hidden="true"></i>
-                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                          <span class="reviews text-muted">590 Ratings</span>
-                                      </div></li>
-                                  </ul>
-      
-                                  <div class="card-body">
-                                    <a href="remotecourse.html" class="btn btn-primary card-link">Details</a>
-                                    <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                  </div>
-                                </div>
+                                </li>
+                              </ul>
+                           
+                            
+                            <div class="card-body mx-auto">
+                              <button class="btn btn-primary"  onclick="addToCart(item68);changeImage()" id="imgClickAndChange">Save Course</button>
+                            <a href="hybridcourse.html" class="btn btn-primary card-link">Details</a>
+                          </div>
+                            
+                        </div>
+                            </div>
+                          </div>
+
+
+
+                          <div class="col-md">
+                            <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                              <div class="card shadow" style="width: 18rem; height: 28rem;" id="item69">
+                                <img src="image/remote.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title mx-auto" id="title">Remote App. Developer</h5>  
+                               <div>
+                                <label> 
+                                  <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                  <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                               </label>
                               </div>
+                            </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="course-rating">
+                                      <span class="average-rating">(4.5)</span>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fas fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                      <span class="reviews text-muted">590 Ratings</span>
+                                  </div>
+                                </li>
+                              </ul>
+                           
+                            
+                            <div class="card-body mx-auto">
+                              <button class="btn btn-primary"  onclick="addToCart(item69);changeImage()" id="imgClickAndChange">Save Course</button>
+                            <a href="remotecourse.html" class="btn btn-primary card-link">Details</a>
+                          </div>
+                            
+                        </div>
+                            </div>
+                          </div>
                             </div>
                         </div>
                         </div>
@@ -468,120 +607,154 @@
                             <div class="row my-5">
 
 
-                                <div class="col-md">
-                          
-                                    <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                      <img src="image/ios.svg" class="card-img-top" alt="...">
-                                      <div class="card-body">
-                                        <h5 class="card-title">iOs Developer</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
-                                      </div>
-                                      <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                          <div class="course-rating">
-                                              <span class="average-rating">(4.5)</span>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                              <span class="reviews text-muted">590 Ratings</span>
-                                          </div></li>
-                                      </ul>
-          
-                                      <div class="card-body">
-                                        <a href="remotecourse.html" class="btn btn-primary card-link">Details</a>
-                                        <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                      </div>
-                                    </div>
+                              <div class="col-md">
+                                <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                                  <div class="card shadow" style="width: 18rem; height: 28rem;" id="item70">
+                                    <img src="image/ios.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title mx-auto" id="title">iOs Developer</h5>  
+                                   <div>
+                                    <label> 
+                                      <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                      <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                                   </label>
                                   </div>
+                                </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                      <div class="course-rating">
+                                          <span class="average-rating">(4.5)</span>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                          <span class="reviews text-muted">590 Ratings</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                               
+                                
+                                <div class="card-body mx-auto">
+                                  <button class="btn btn-primary"  onclick="addToCart(item70);changeImage()" id="imgClickAndChange">Save Course</button>
+                                <a href="ioscourse.html" class="btn btn-primary card-link">Details</a>
+                              </div>
+                                
+                            </div>
+                                </div>
+                              </div>
     
-                                  <div class="col-md">
-                          
-                                    <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                      <img src="image/android.svg" class="card-img-top" alt="...">
-                                      <div class="card-body">
-                                        <h5 class="card-title">Android Developer</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
-                                      </div>
-                                      <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                          <div class="course-rating">
-                                              <span class="average-rating">(4.5)</span>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                              <span class="reviews text-muted">590 Ratings</span>
-                                          </div></li>
-                                      </ul>
-          
-                                      <div class="card-body">
-                                        <a href="androidcourse.html" class="btn btn-primary card-link">Details</a>
-                                        <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                      </div>
-                                    </div>
+                              <div class="col-md">
+                                <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                                  <div class="card shadow" style="width: 18rem; height: 28rem;" id="item71">
+                                    <img src="image/android.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title mx-auto" id="title">Android Developer</h5>  
+                                   <div>
+                                    <label> 
+                                      <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                      <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                                   </label>
                                   </div>
+                                </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                      <div class="course-rating">
+                                          <span class="average-rating">(4.5)</span>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                          <span class="reviews text-muted">590 Ratings</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                               
+                                
+                                <div class="card-body mx-auto">
+                                  <button class="btn btn-primary"  onclick="addToCart(item71);changeImage()" id="imgClickAndChange">Save Course</button>
+                                <a href="androidcourse.html" class="btn btn-primary card-link">Details</a>
+                              </div>
+                                
+                            </div>
+                                </div>
+                              </div>
     
     
-                                  <div class="col-md">
-                          
-                                    <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                      <img src="image/hybrid.webp" class="card-img-top" alt="...">
-                                      <div class="card-body">
-                                        <h5 class="card-title">Hybrid App Developer</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
-                                      </div>
-                                      <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                          <div class="course-rating">
-                                              <span class="average-rating">(4.5)</span>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                              <span class="reviews text-muted">590 Ratings</span>
-                                          </div></li>
-                                      </ul>
-          
-                                      <div class="card-body">
-                                        <a href="androidcourse.html" class="btn btn-primary card-link">Details</a>
-                                        <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                      </div>
-                                    </div>
+                              <div class="col-md">
+                                <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                                  <div class="card shadow" style="width: 18rem; height: 28rem;" id="item72">
+                                    <img src="image/hybrid.webp" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title mx-auto" id="title">Hybrid App Developer</h5>  
+                                   <div>
+                                    <label> 
+                                      <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                      <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                                   </label>
                                   </div>
-    
-    
-    
-                                  <div class="col-md">
-                          
-                                    <div class="card shadow" style="width: 18rem; height: 28rem;">
-                                      <img src="image/remote.jpeg" class="card-img-top" alt="...">
-                                      <div class="card-body">
-                                        <h5 class="card-title">Remote Application Developer</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus consequuntur voluptas fugit corrupti eum? Saepe hic quae obcaecati error!</p>
+                                </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                      <div class="course-rating">
+                                          <span class="average-rating">(4.5)</span>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                          <span class="reviews text-muted">590 Ratings</span>
                                       </div>
-                                      <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                          <div class="course-rating">
-                                              <span class="average-rating">(4.5)</span>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fas fa-star" aria-hidden="true"></i>
-                                              <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                              <span class="reviews text-muted">590 Ratings</span>
-                                          </div></li>
-                                      </ul>
-          
-                                      <div class="card-body">
-                                        <a href="remotecourse.html" class="btn btn-primary card-link">Details</a>
-                                        <a href="#" class="btn btn-primary card-link">Save Course</a>
-                                      </div>
-                                    </div>
+                                    </li>
+                                  </ul>
+                               
+                                
+                                <div class="card-body mx-auto">
+                                  <button class="btn btn-primary"  onclick="addToCart(item72);changeImage()" id="imgClickAndChange">Save Course</button>
+                                <a href="hybridcourse.html" class="btn btn-primary card-link">Details</a>
+                              </div>
+                                
+                            </div>
+                                </div>
+                              </div>
+    
+                              <div class="col-md">
+                                <div class="col-md d-flex align-items-stretch text-start" id="card-image">
+                                  <div class="card shadow" style="width: 18rem; height: 28rem;" id="item73">
+                                    <img src="image/remote.jpeg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title mx-auto" id="title">Remote App. Developer</h5>  
+                                   <div>
+                                    <label> 
+                                      <p class="card-text">Lorem ipsum dolor sit amet   Saepe hic quae obcaecati error!</p>
+                                      <p class="fw-bold text-danger"><i>Price: 1,000,000.00</i></p>
+                                   </label>
                                   </div>
+                                </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                      <div class="course-rating">
+                                          <span class="average-rating">(4.5)</span>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fas fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                          <span class="reviews text-muted">590 Ratings</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                               
+                                
+                                <div class="card-body mx-auto">
+                                  <button class="btn btn-primary"  onclick="addToCart(item73);changeImage()" id="imgClickAndChange">Save Course</button>
+                                <a href="remotecourse.html" class="btn btn-primary card-link">Details</a>
+                              </div>
+                                
+                            </div>
+                                </div>
+                              </div>
                                 </div>
 
 
@@ -611,117 +784,141 @@
 
 
         <div class="col-md mx-2 shadow">
-        <div class="row">
-               <div class="col-md-4">
-                    <img src="image/ios.svg" width="350" class="my-3 img-fluid rounded shadow">
-                </div>
-                
-                <div class="col-md-8 my-4">
-                        <h4 class="course-title">iOs Developer</h4>
+          <div class="row">
+            <div class="col-md-4">
+             <div class="" id="item74">
+                 <img src="image/ios.png" width="350" class="my-3 img-fluid rounded shadow">
+             <title class="" id="title">iOs Developer &nbsp; Price: 1,000,000</title>
+              </div>
 
-                        <div class="course-rating">
-                            <span class="average-rating">(4.5)</span>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                            <span class="reviews text-muted">590 Ratings</span>
-                          </div>
-                
-                          <h6 class="text-dark">John Doe</h6>
+             </div>
+             
+             <div class="col-md-8 my-4">
+                     <h4 class="course-title" id="title">iOs Developer</h4>
+                     
+
+                     <div class="course-rating">
+                         <span class="average-rating">(4.5)</span>
+                         <i class="fas fa-star" aria-hidden="true"></i>
+                         <i class="fas fa-star" aria-hidden="true"></i>
+                         <i class="fas fa-star" aria-hidden="true"></i>
+                         <i class="fas fa-star" aria-hidden="true"></i>
+                         <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                         <span class="reviews text-muted">590 Ratings</span>
+                       </div>
                        
-                         <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                         <a class="btn btn-primary" href="ioscourse.html">View this course</a>
-       
-                        
-                </div>     
-        </div>
+                    
+                       <h6 class="text-dark">John Doe</h6>
+                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                     </p>
+                     
+                     <button class="btn btn-primary"  onclick="addToCart(item74);changeImage()" id="imgClickAndChange">Save Course</button>
+                      <a class="btn btn-primary" href="ioscourse.html">View this course</a> 
+             </div>     
+     </div>
     <hr>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="image/android.svg" width="350" class="my-3 img-fluid rounded shadow">
-                </div>
-                
-                <div class="col-md-8 my-4">
-                        <h4 class="course-title">Android Developer</h4>
-
-                        <div class="course-rating">
-                            <span class="average-rating">(4.5)</span>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                            <span class="reviews text-muted">590 Ratings</span>
-                        </div>
-                
-                        <h6 class="text-dark">John Doe</h6>
-                        
-                        <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                        <a class="btn btn-primary" href="androidcourse.html">View this course</a>
-
-                        
-                </div>     
+    <div class="row">
+      <div class="col-md-4">
+       <div class="" id="item75">
+           <img src="image/android.png" width="350" class="my-3 img-fluid rounded shadow">
+       <title class="" id="title">Android Developer &nbsp; Price: 1,000,000</title>
         </div>
+
+       </div>
+       
+       <div class="col-md-8 my-4">
+               <h4 class="course-title" id="title">Android Developer</h4>
+               
+
+               <div class="course-rating">
+                   <span class="average-rating">(4.5)</span>
+                   <i class="fas fa-star" aria-hidden="true"></i>
+                   <i class="fas fa-star" aria-hidden="true"></i>
+                   <i class="fas fa-star" aria-hidden="true"></i>
+                   <i class="fas fa-star" aria-hidden="true"></i>
+                   <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                   <span class="reviews text-muted">590 Ratings</span>
+                 </div>
+                 
+              
+                 <h6 class="text-dark">John Doe</h6>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+               </p>
+               
+               <button class="btn btn-primary"  onclick="addToCart(item75);changeImage()" id="imgClickAndChange">Save Course</button>
+                <a class="btn btn-primary" href="androidcourse.html">View this course</a> 
+       </div>     
+</div>
         <hr>
 
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="image/hybrid.webp" width="350" class="my-3 img-fluid rounded shadow">
-                    </div>
-                    
-                    <div class="col-md-8 my-4">
-                            <h4 class="course-title">Hybrid App Developer</h4>
-
-                            <div class="course-rating">
-                                <span class="average-rating">(4.5)</span>
-                                <i class="fas fa-star" aria-hidden="true"></i>
-                                <i class="fas fa-star" aria-hidden="true"></i>
-                                <i class="fas fa-star" aria-hidden="true"></i>
-                                <i class="fas fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                <span class="reviews text-muted">590 Ratings</span>
-                            </div>
-                    
-                            <h6 class="text-dark">John Doe</h6>
-                            
-                            <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                            <a class="btn btn-primary" href="hybridcourse.html">View this course</a>
-            
-                            
-                    </div>     
+        <div class="row">
+          <div class="col-md-4">
+           <div class="" id="item76">
+               <img src="image/hybrid.webp" width="350" class="my-3 img-fluid rounded shadow">
+           <title class="" id="title">Hybrid App Developer &nbsp; Price: 1,000,000</title>
             </div>
+
+           </div>
+           
+           <div class="col-md-8 my-4">
+                   <h4 class="course-title" id="title">Hybrid App Developer</h4>
+                   
+
+                   <div class="course-rating">
+                       <span class="average-rating">(4.5)</span>
+                       <i class="fas fa-star" aria-hidden="true"></i>
+                       <i class="fas fa-star" aria-hidden="true"></i>
+                       <i class="fas fa-star" aria-hidden="true"></i>
+                       <i class="fas fa-star" aria-hidden="true"></i>
+                       <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                       <span class="reviews text-muted">590 Ratings</span>
+                     </div>
+                     
+                  
+                     <h6 class="text-dark">John Doe</h6>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                   </p>
+                   
+                   <button class="btn btn-primary"  onclick="addToCart(item76);changeImage()" id="imgClickAndChange">Save Course</button>
+                    <a class="btn btn-primary" href="hybridcourse.html">View this course</a> 
+           </div>     
+   </div>
         <hr>
 
 
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="image/remote.jpeg" width="350" class="my-3 img-fluid rounded shadow">
-                        </div>
-                        
-                        <div class="col-md-8 my-4">
-                                <h4 class="course-title">Remote Application Developer</h4>
+        <div class="row">
+          <div class="col-md-4">
+           <div class="" id="item77">
+               <img src="image/remote.jpeg" width="350" class="my-3 img-fluid rounded shadow">
+           <title class="" id="title">Remote Application Developer &nbsp; Price: 1,000,000</title>
+            </div>
 
-                                <div class="course-rating">
-                                    <span class="average-rating">(4.5)</span>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="reviews text-muted">590 Ratings</span>
-                                </div>
-                        
-                                <h6 class="text-dark">John Doe</h6>
-                                
-                                <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, temporibus?</p>
-                                <a class="btn btn-primary" href="remotecourse.html">View this course</a>
-                
-                                
-                        </div>     
-                </div>
+           </div>
+           
+           <div class="col-md-8 my-4">
+                   <h4 class="course-title" id="title">Remote Application Developer</h4>
+                   
+
+                   <div class="course-rating">
+                       <span class="average-rating">(4.5)</span>
+                       <i class="fas fa-star" aria-hidden="true"></i>
+                       <i class="fas fa-star" aria-hidden="true"></i>
+                       <i class="fas fa-star" aria-hidden="true"></i>
+                       <i class="fas fa-star" aria-hidden="true"></i>
+                       <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                       <span class="reviews text-muted">590 Ratings</span>
+                     </div>
+                     
+                  
+                     <h6 class="text-dark">John Doe</h6>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
+                   </p>
+                   
+                   <button class="btn btn-primary"  onclick="addToCart(item77);changeImage()" id="imgClickAndChange">Save Course</button>
+                    <a class="btn btn-primary" href="remotecourse.html">View this course</a> 
+           </div>     
+   </div>
             <hr>
 
 
@@ -801,7 +998,7 @@
         
 
 
-
+        <script src="../../js/cart.js"></script>
         <script src="../../bootstrap/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/cbc56ed82a.js" crossorigin="anonymous"></script>
 </body>

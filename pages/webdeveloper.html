@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-none shadow" id="navbarbg">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="navbarbg">
 
        
         <div class="navbar-brand">
@@ -66,18 +66,17 @@
 
                <!-- modal-->
                           <!-- Button trigger modal -->
-                          <button type="button" class="btn btn-none" data-bs-toggle="modal" data-bs-target="#exampleModal "  onclick="noTice()">
-                            <i class="fa-solid fa-folder-open"></i>
+                          <button type="button" class="btn btn-none" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="noTice()">
+                            <img class="img-fluid w-20" id="imgClickAndChange" src="black.gif">
                             <span class='badge badge-warning' id='lblCartCount'><div id="total-count"></div></span>
                           </button>
     
                           <!-- Modal -->
-                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
+                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"  >
+                            <div class="modal-dialog" role="document" >
                               <div class="modal-content">
                                 <div class="modal-header">
                                   <h5 class="modal-title" id="exampleModalLabel">Save Courses</h5>
-                                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                   </button>
                                 </div>
@@ -88,8 +87,7 @@
                                 </div>
                                 </div>
                                 <div class="modal-footer">
-                                 
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="document.getElementById('imgClickAndChange').src='black.gif'">Close</button>
                                 </div>
                               </div>
                             </div>
@@ -155,8 +153,8 @@
                            
                             
                             <div class="card-body mx-auto">
-                            <button class="btn btn-primary"  onclick="addToCart(item5)">Save Course</button>
-                            <a href="pages/bootstrapcourse.html" class="btn btn-primary card-link">Details</a>
+                              <button class="btn btn-primary"  onclick="addToCart(item5);changeImage()" id="imgClickAndChange">Save Course</button>
+                            <a href="bootstrapcourse.html" class="btn btn-primary card-link">Details</a>
                           </div>
                             
                         </div>
@@ -192,8 +190,8 @@
                            
                             
                             <div class="card-body mx-auto">
-                            <button class="btn btn-primary"  onclick="addToCart(item6)">Save Course</button>
-                            <a href="pages/reactcourse" class="btn btn-primary card-link">Details</a>
+                              <button class="btn btn-primary"  onclick="addToCart(item6);changeImage()" id="imgClickAndChange">Save Course</button>
+                            <a href="reactcourse.html" class="btn btn-primary card-link">Details</a>
                           </div>
                             
                         </div>
@@ -230,8 +228,8 @@
                            
                             
                             <div class="card-body mx-auto">
-                            <button class="btn btn-primary"  onclick="addToCart(item7)">Save Course</button>
-                            <a href="pages/javascriptcourse.html" class="btn btn-primary card-link">Details</a>
+                              <button class="btn btn-primary"  onclick="addToCart(item7);changeImage()" id="imgClickAndChange">Save Course</button>
+                            <a href="javascriptcourse.html" class="btn btn-primary card-link">Details</a>
                           </div>
                             
                         </div>
@@ -270,8 +268,8 @@
                            
                             
                             <div class="card-body mx-auto">
-                            <button class="btn btn-primary"  onclick="addToCart(item8)">Save Course</button>
-                            <a href="pages/tailwindcourse.html" class="btn btn-primary card-link">Details</a>
+                              <button class="btn btn-primary"  onclick="addToCart(item8);changeImage()" id="imgClickAndChange">Save Course</button>
+                            <a href="tailwindcourse.html" class="btn btn-primary card-link">Details</a>
                           </div>
                             
                         </div>
@@ -319,8 +317,8 @@
                                
                                 
                                 <div class="card-body mx-auto">
-                                <button class="btn btn-primary"  onclick="addToCart(item9)">Save Course</button>
-                                <a href="pages/reactcourse.html" class="btn btn-primary card-link">Details</a>
+                                  <button class="btn btn-primary"  onclick="addToCart(item9);changeImage()" id="imgClickAndChange">Save Course</button>
+                                <a href="reactcourse.html" class="btn btn-primary card-link">Details</a>
                               </div>
                                 
                             </div>
@@ -356,8 +354,8 @@
                                
                                 
                                 <div class="card-body mx-auto">
-                                <button class="btn btn-primary"  onclick="addToCart(item10)">Save Course</button>
-                                <a href="pages/angularcourse.html" class="btn btn-primary card-link">Details</a>
+                                  <button class="btn btn-primary"  onclick="addToCart(item10);changeImage()" id="imgClickAndChange">Save Course</button>
+                                <a href="angularcourse.html" class="btn btn-primary card-link">Details</a>
                               </div>
                                 
                             </div>
@@ -394,8 +392,8 @@
                                
                                 
                                 <div class="card-body mx-auto">
-                                <button class="btn btn-primary"  onclick="addToCart(item11)">Save Course</button>
-                                <a href="pages/nodecoursehtml" class="btn btn-primary card-link">Details</a>
+                                  <button class="btn btn-primary"  onclick="addToCart(item11);changeImage()" id="imgClickAndChange">Save Course</button>
+                                <a href="nodecourse.html" class="btn btn-primary card-link">Details</a>
                               </div>
                                 
                             </div>
@@ -432,8 +430,8 @@
                                
                                 
                                 <div class="card-body mx-auto">
-                                <button class="btn btn-primary"  onclick="addToCart(item12)">Save Course</button>
-                                <a href="pages/phpcourse.html" class="btn btn-primary card-link">Details</a>
+                                  <button class="btn btn-primary"  onclick="addToCart(item12);changeImage()" id="imgClickAndChange">Save Course</button>
+                                <a href="phpcourse.html" class="btn btn-primary card-link">Details</a>
                               </div>
                                 
                             </div>
@@ -481,8 +479,8 @@
                                
                                 
                                 <div class="card-body mx-auto">
-                                <button class="btn btn-primary"  onclick="addToCart(item13)">Save Course</button>
-                                <a href="pages/embercourse.html" class="btn btn-primary card-link">Details</a>
+                                  <button class="btn btn-primary"  onclick="addToCart(item13);changeImage()" id="imgClickAndChange">Save Course</button>
+                                <a href="embercourse.html" class="btn btn-primary card-link">Details</a>
                               </div>
                                 
                             </div>
@@ -518,8 +516,8 @@
                                
                                 
                                 <div class="card-body mx-auto">
-                                <button class="btn btn-primary"  onclick="addToCart(item14)">Save Course</button>
-                                <a href="pages/nextcoursehtml" class="btn btn-primary card-link">Details</a>
+                                  <button class="btn btn-primary"  onclick="addToCart(item14);changeImage()" id="imgClickAndChange">Save Course</button>
+                                <a href="nextcourse.html" class="btn btn-primary card-link">Details</a>
                               </div>
                                 
                             </div>
@@ -555,8 +553,8 @@
                                
                                 
                                 <div class="card-body mx-auto">
-                                <button class="btn btn-primary"  onclick="addToCart(item15)">Save Course</button>
-                                <a href="pages/magiccourse.html" class="btn btn-primary card-link">Details</a>
+                                  <button class="btn btn-primary"  onclick="addToCart(item15);changeImage()" id="imgClickAndChange">Save Course</button>
+                                <a href="magiccourse.html" class="btn btn-primary card-link">Details</a>
                               </div>
                                 
                             </div>
@@ -594,8 +592,8 @@
                                
                                 
                                 <div class="card-body mx-auto">
-                                <button class="btn btn-primary"  onclick="addToCart(item16)">Save Course</button>
-                                <a href="pages/tacitcourse.html" class="btn btn-primary card-link">Details</a>
+                                  <button class="btn btn-primary"  onclick="addToCart(item16);changeImage()" id="imgClickAndChange">Save Course</button>
+                                <a href="tacitcourse.html" class="btn btn-primary card-link">Details</a>
                               </div>
                                 
                             </div>
@@ -644,8 +642,8 @@
                                    
                                     
                                     <div class="card-body mx-auto">
-                                    <button class="btn btn-primary"  onclick="addToCart(item17)">Save Course</button>
-                                    <a href="pages/semanticcoursehtml" class="btn btn-primary card-link">Details</a>
+                                      <button class="btn btn-primary"  onclick="addToCart(item17);changeImage()" id="imgClickAndChange">Save Course</button>
+                                    <a href="semanticcourse.html" class="btn btn-primary card-link">Details</a>
                                   </div>
                                     
                                 </div>
@@ -681,8 +679,8 @@
                                    
                                     
                                     <div class="card-body mx-auto">
-                                    <button class="btn btn-primary"  onclick="addToCart(item18)">Save Course</button>
-                                    <a href="pages/materializecourse.html" class="btn btn-primary card-link">Details</a>
+                                      <button class="btn btn-primary"  onclick="addToCart(item18);changeImage()" id="imgClickAndChange">Save Course</button>
+                                    <a href="materializecourse.html" class="btn btn-primary card-link">Details</a>
                                   </div>
                                     
                                 </div>
@@ -719,8 +717,8 @@
                                    
                                     
                                     <div class="card-body mx-auto">
-                                    <button class="btn btn-primary"  onclick="addToCart(item19)">Save Course</button>
-                                    <a href="pages/jquerycourse.html" class="btn btn-primary card-link">Details</a>
+                                      <button class="btn btn-primary"  onclick="addToCart(item19);changeImage()" id="imgClickAndChange">Save Course</button>
+                                    <a href="jquerycourse.html" class="btn btn-primary card-link">Details</a>
                                   </div>
                                     
                                 </div>
@@ -757,8 +755,8 @@
                                    
                                     
                                     <div class="card-body mx-auto">
-                                    <button class="btn btn-primary"  onclick="addToCart(item20)">Save Course</button>
-                                    <a href="pages/expresscourse.html" class="btn btn-primary card-link">Details</a>
+                                      <button class="btn btn-primary"  onclick="addToCart(item20);changeImage()" id="imgClickAndChange">Save Course</button>
+                                    <a href="expresscourse.html" class="btn btn-primary card-link">Details</a>
                                   </div>
                                     
                                 </div>
@@ -822,7 +820,7 @@
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                         </p>
                         
-                         <button class="btn btn-primary"  onclick="addToCart(item25)">Save Course</button>
+                        <button class="btn btn-primary"  onclick="addToCart(item25);changeImage()" id="imgClickAndChange">Save Course</button>
                          <a class="btn btn-primary" href="htmlcourse.html">View this course</a> 
                 </div>     
         </div>
@@ -858,7 +856,7 @@
                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                 </p>
                  
-                  <button class="btn btn-primary"  onclick="addToCart(item26)">Save Course</button>
+                <button class="btn btn-primary"  onclick="addToCart(item26);changeImage()" id="imgClickAndChange">Save Course</button>
                   <a class="btn btn-primary" href="csscourse.html">View this course</a> 
          </div>     
  </div>
@@ -892,7 +890,7 @@
                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                     </p>
                      
-                      <button class="btn btn-primary"  onclick="addToCart(item27)">Save Course</button>
+                    <button class="btn btn-primary"  onclick="addToCart(item27);changeImage()" id="imgClickAndChange">Save Course</button>
                       <a class="btn btn-primary" href="javascriptcourse.html">View this course</a> 
              </div>     
      </div>
@@ -927,7 +925,7 @@
                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                     </p>
                      
-                      <button class="btn btn-primary"  onclick="addToCart(item28)">Save Course</button>
+                    <button class="btn btn-primary"  onclick="addToCart(item28);changeImage()" id="imgClickAndChange">Save Course</button>
                       <a class="btn btn-primary" href="bootstrapcourse.html">View this course</a> 
              </div>     
      </div>
@@ -962,7 +960,7 @@
                           
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                         </p>
-                          <button class="btn btn-primary"  onclick="addToCart(item29)">Save Course</button>
+                        <button class="btn btn-primary"  onclick="addToCart(item29);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="foundation.html">View this course</a> 
                  </div>     
          </div>
@@ -997,7 +995,7 @@
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                         </p>
                          
-                          <button class="btn btn-primary"  onclick="addToCart(item30)">Save Course</button>
+                        <button class="btn btn-primary"  onclick="addToCart(item30);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="bulma.html">View this course</a> 
                  </div>     
          </div>
@@ -1033,7 +1031,7 @@
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                         </p>
                          
-                          <button class="btn btn-primary"  onclick="addToCart(item31)">Save Course</button>
+                        <button class="btn btn-primary"  onclick="addToCart(item31);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="ulkitcourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1068,7 +1066,7 @@
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                         </p>
                          
-                          <button class="btn btn-primary"  onclick="addToCart(item32)">Save Course</button>
+                        <button class="btn btn-primary"  onclick="addToCart(item32);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="semanticcourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1102,7 +1100,7 @@
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                         </p>
                          
-                          <button class="btn btn-primary"  onclick="addToCart(item33)">Save Course</button>
+                        <button class="btn btn-primary"  onclick="addToCart(item33);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="tailwindcourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1137,7 +1135,7 @@
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                         </p>
                          
-                          <button class="btn btn-primary"  onclick="addToCart(item34)">Save Course</button>
+                        <button class="btn btn-primary"  onclick="addToCart(item34);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="materializecourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1172,7 +1170,7 @@
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                         </p>
                          
-                          <button class="btn btn-primary"  onclick="addToCart(item35)">Save Course</button>
+                        <button class="btn btn-primary"  onclick="addToCart(item35);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="purecsscourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1206,7 +1204,7 @@
                           
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                         </p>
-                          <button class="btn btn-primary"  onclick="addToCart(item36)">Save Course</button>
+                        <button class="btn btn-primary"  onclick="addToCart(item36);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="skeletoncourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1242,7 +1240,7 @@
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                         </p>
                          
-                          <button class="btn btn-primary"  onclick="addToCart(item37)">Save Course</button>
+                        <button class="btn btn-primary"  onclick="addToCart(item37);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="magiccourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1279,7 +1277,7 @@
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                         </p>
                          
-                          <button class="btn btn-primary"  onclick="addToCart(item38)">Save Course</button>
+                        <button class="btn btn-primary"  onclick="addToCart(item38);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="animatecourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1314,7 +1312,7 @@
                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                                 </p>
                                  
-                                  <button class="btn btn-primary"  onclick="addToCart(item39)">Save Course</button>
+                                <button class="btn btn-primary"  onclick="addToCart(item39);changeImage()" id="imgClickAndChange">Save Course</button>
                                   <a class="btn btn-primary" href="tacitcourse.html">View this course</a> 
                          </div>     
                  </div>
@@ -1350,7 +1348,7 @@
                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                             </p>
                              
-                              <button class="btn btn-primary"  onclick="addToCart(item40)">Save Course</button>
+                            <button class="btn btn-primary"  onclick="addToCart(item40);changeImage()" id="imgClickAndChange">Save Course</button>
                               <a class="btn btn-primary" href="jquerycourse.html">View this course</a> 
                      </div>     
              </div>
@@ -1384,7 +1382,7 @@
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                         </p>
                          
-                          <button class="btn btn-primary"  onclick="addToCart(item41)">Save Course</button>
+                        <button class="btn btn-primary"  onclick="addToCart(item41);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="reactcourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1420,7 +1418,7 @@
                           
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                         </p>
-                          <button class="btn btn-primary"  onclick="addToCart(item42)">Save Course</button>
+                        <button class="btn btn-primary"  onclick="addToCart(item42);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="vuecourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1455,7 +1453,7 @@
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                         </p>
                          
-                          <button class="btn btn-primary"  onclick="addToCart(item43)">Save Course</button>
+                        <button class="btn btn-primary"  onclick="addToCart(item43);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="angularcourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1490,7 +1488,7 @@
                           
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                            </p>
-                          <button class="btn btn-primary"  onclick="addToCart(item44)">Save Course</button>
+                           <button class="btn btn-primary"  onclick="addToCart(item44);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="sveltecourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1526,7 +1524,7 @@
                           
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                            </p>
-                          <button class="btn btn-primary"  onclick="addToCart(item45)">Save Course</button>
+                           <button class="btn btn-primary"  onclick="addToCart(item45);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="expresscourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1563,7 +1561,7 @@
                           
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                            </p>
-                          <button class="btn btn-primary"  onclick="addToCart(item46)">Save Course</button>
+                           <button class="btn btn-primary"  onclick="addToCart(item46);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="embercourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1599,7 +1597,7 @@
                           
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                            </p>
-                          <button class="btn btn-primary"  onclick="addToCart(item47)">Save Course</button>
+                           <button class="btn btn-primary"  onclick="addToCart(item47);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="nextcourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1636,7 +1634,7 @@
                           
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                            </p>
-                          <button class="btn btn-primary"  onclick="addToCart(item48)">Save Course</button>
+                           <button class="btn btn-primary"  onclick="addToCart(item48);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="nodecourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1673,7 +1671,7 @@
                           
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                            </p>
-                          <button class="btn btn-primary"  onclick="addToCart(item49)">Save Course</button>
+                           <button class="btn btn-primary"  onclick="addToCart(item49);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="phpcourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1709,7 +1707,7 @@
                           
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                            </p>
-                          <button class="btn btn-primary"  onclick="addToCart(item50)">Save Course</button>
+                           <button class="btn btn-primary"  onclick="addToCart(item50);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="rubycourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1745,7 +1743,7 @@
                           
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                            </p>
-                          <button class="btn btn-primary"  onclick="addToCart(item51)">Save Course</button>
+                           <button class="btn btn-primary"  onclick="addToCart(item51);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="pythoncourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1781,7 +1779,7 @@
                           
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                            </p>
-                          <button class="btn btn-primary"  onclick="addToCart(item55)">Save Course</button>
+                           <button class="btn btn-primary"  onclick="addToCart(item55);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="javacourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1818,7 +1816,7 @@
                           
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                            </p>
-                          <button class="btn btn-primary"  onclick="addToCart(item56)">Save Course</button>
+                           <button class="btn btn-primary"  onclick="addToCart(item56);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="soliditycourse.html">View this course</a> 
                  </div>     
          </div>
@@ -1854,7 +1852,7 @@
                           
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ea?
                            </p>
-                          <button class="btn btn-primary"  onclick="addToCart(item57)">Save Course</button>
+                           <button class="btn btn-primary"  onclick="addToCart(item57);changeImage()" id="imgClickAndChange">Save Course</button>
                           <a class="btn btn-primary" href="kotlincourse.html">View this course</a> 
                  </div>     
          </div>

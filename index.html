@@ -21,7 +21,7 @@
     <!--Navigation bar-->
 
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light " id="navbarbg">
+            <nav class="navbar navbar-expand-lg navbar-light bg-none " id="navbarbg">
 
                     <div class="navbar-brand">
                         <a class="navbar-brand fw-bold " href="#"><img src="image/logo2.png" width="50">W<span class="text-warning">E</span>-L<span class="text-warning">e</span>arn</a>
@@ -80,7 +80,7 @@
                         <!-- modal-->
                           <!-- Button trigger modal -->
                       <button type="button" class="btn btn-none" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="noTice()">
-                        <i class="fa-solid fa-folder-open"></i>
+                        <img class="img-fluid w-20" id="imgClickAndChange" src="black.gif">
                         <span class='badge badge-warning' id='lblCartCount'><div id="total-count"></div></span>
                       </button>
 
@@ -90,9 +90,7 @@
                           <div class="modal-content">
                             <div class="modal-header">
                               <h5 class="modal-title" id="exampleModalLabel">Save Courses</h5>
-                              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
+                              
                             </div>
                             <div class="modal-body">
                               <div class="cart text-center" id="cart">
@@ -102,7 +100,7 @@
                             </div>
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="document.getElementById('imgClickAndChange').src='black.gif'">Close</button>
                             </div>
                           </div>
                         </div>
@@ -113,6 +111,7 @@
 <!-- END of navigation bar-->
 
     <!--HEADER END-->
+    
    
     <!-- INTRO SECTION-->
 
@@ -173,7 +172,7 @@
 
           <section class="">
     
-            <div class="container content-center my-5 py-5" id="about">
+            <div class="container content-center my-5 py-5 reveal" id="about">
                     <div class="row">
                         <h2 class="fw-bold text-center text-uppercase display-5">About</h2>
 
@@ -194,13 +193,10 @@
 
 
 
-
-   
-
     <!--POPULAR CATEGORIES START-->
     <section>
     
-      <div class="container text-center my-5 py-5">
+      <div class="container text-center my-5 py-5 reveal">
               <h2 class="display-5 fw-bold  text-uppercase my-5 py-5">Categories</h2>
           <div class="categories" id="categories">
               <div class="row text-center">
@@ -402,7 +398,7 @@
                                
                                 
                                 <div class="card-body mx-auto">
-                                <button class="btn btn-primary"  onclick="addToCart(item1)">Save Course</button>
+                                <button class="btn btn-primary"  onclick="addToCart(item1);changeImage()" id="imgClickAndChange">Save Course</button>
                                 <a href="pages/htmlcourse.html" class="btn btn-primary card-link">Details</a>
                               </div>
                                 
@@ -437,9 +433,11 @@
                                     </li>
                                   </ul>
                                
+
+                   
                                 
                                 <div class="card-body mx-auto">
-                                <button class="btn btn-primary"  onclick="addToCart(item2)">Save Course</button>
+                                <button class="btn btn-primary"  onclick="addToCart(item2);changeImage()" id="imgClickAndChange" >Save Course</button>
                                 <a href="pages/csscourse.html" class="btn btn-primary card-link">Details</a>
                               </div>
                                 
@@ -477,7 +475,7 @@
                                
                                 
                                 <div class="card-body mx-auto">
-                                <button class="btn btn-primary"  onclick="addToCart(item3)">Save Course</button>
+                                <button class="btn btn-primary"  onclick="addToCart(item3);changeImage()" id="imgClickAndChange">Save Course</button>
                                 <a href="pages/javascriptcourse.html" class="btn btn-primary card-link">Details</a>
                               </div>
                                 
@@ -514,7 +512,7 @@
                                
                                 
                                 <div class="card-body mx-auto">
-                                <button class="btn btn-primary"  onclick="addToCart(item4)">Save Course</button>
+                                <button class="btn btn-primary"  onclick="addToCart(item4);changeImage()" id="imgClickAndChange">Save Course</button>
                                 <a href="pages/bootstrapcourse.html" class="btn btn-primary card-link">Details</a>
                               </div>
                                 
@@ -875,6 +873,7 @@
     
 
     <script src="js/cart.js"></script>
+    <script src="js/effects.js"></script>
     <script src="bootstrap/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/cbc56ed82a.js" crossorigin="anonymous"></script>
 </body>
